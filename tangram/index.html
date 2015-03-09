@@ -1,0 +1,691 @@
+ <!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<script type="text/javascript" src="jquery-1.11.1.min.js"></script>
+<style>
+	
+	body,html{
+		background: -webkit-linear-gradient(top,#0a768a 0%,#50acb4 100%);
+		width: 100%;
+		height: 100%;
+		padding: 0;
+		margin: 0;
+	}
+	#boxbasic {
+		z-index: 60000;
+		position: relative;
+		width: 410px;
+		height: 410px;
+		display: inline-block;
+		left: 50%;
+		margin-left: -205px;
+		margin-top: 200px;
+	}
+	/*initial*/
+	#one {
+		position: absolute;
+		top: 4px;
+		left: 4px;
+		opacity: 0.7;
+	}
+	.trianglebig-90 {
+		height: 0;
+		width: 0;
+		border-top: 200px solid transparent;
+		border-right: 0 solid transparent;
+		border-bottom: 200px solid transparent;
+		border-left: 200px solid #fff;
+	}
+	#two {
+			position: absolute;
+			top: 0;
+			left: 4px;
+			opacity: .65;
+		}
+	.parallello div {
+		display: inline-block;
+		height: 0;
+		width: 0;
+		border-top: 100px solid #fff;
+		border-right: 100px solid transparent;
+		border-bottom: 0 solid transparent;
+		border-left: 100px solid transparent;
+	}
+	.parallello div+div {
+		display: inline-block;
+		height: 0;
+		width: 0;
+		border-top: 0 solid #fff;
+		border-right: 100px solid transparent;
+		border-bottom: 100px solid #fff;
+		border-left: 100px solid transparent;
+		position: relative;
+		left: -100px;
+	}
+	
+	#three{
+		position: absolute;
+		top: 0;
+		left: 208px;
+		opacity: 0.6
+	}
+	.trianglemedium-45 {
+		height: 0;
+		width: 0;
+		border-top: 0 solid transparent;
+		border-right: 200px solid #fff;
+		border-bottom: 200px solid transparent;
+		border-left: 0 solid #fff;
+	}
+	
+	#four{
+		position: absolute;
+		top: 104px;
+		left: 208px;
+		opacity: 0.5;
+	}
+	.square-45 div {
+		height: 0;
+		width: 0;
+		border-top: 0 solid #fff;
+		border-right: 100px solid transparent;
+		border-bottom: 100px solid #fff;
+		border-left: 100px solid transparent;
+	}
+	.square-45 div+div {
+		height: 0;
+		width: 0;
+		border-top: 100px solid #fff;
+		border-right: 100px solid transparent;
+		border-bottom: 0 solid #fff;
+		border-left: 100px solid transparent;
+	}
+	#five{
+		position: absolute;
+		top: 102px;
+		left: 106px;
+		opacity: 0.5;
+	}
+	div.trianglesmall-180 {
+		height: 0;
+		width: 0;
+		border-top: 100px solid #fff;
+		border-right: 100px solid transparent;
+		border-bottom: 0 #fff solid;
+		border-left: 100px solid transparent;
+	}
+	#six {
+		position: absolute;
+		top: 206px;
+		left: 6px;
+		opacity: 0.75;
+	}
+	div.trianglebig {
+		height: 0;
+		width: 0;
+		border-top: 0 solid transparent;
+		border-right: 200px solid transparent;
+		border-bottom: 200px #fff solid;
+		border-left: 200px solid transparent;
+	}
+	#seven {
+		position: absolute;
+		top: 206px;
+		left: 310px;
+		opacity: 0.8;
+	}
+	.trianglesmall-270 {
+		height: 0;
+		width: 0;
+		border-top: 100px solid transparent;
+		border-right: 100px solid #fff;
+		border-bottom: 100px solid transparent;
+		border-left: 0 solid #fff;
+	}
+
+#boxbasic {
+	-webkit-transform: scale(0.7);
+	-moz-transform: scale(0.7);
+	-o-transform: scale(0.7);
+	-ms-transform: scale(0.7);
+	transform: scale(0.7);
+}
+
+#boxbasic div {
+	-webkit-transition: all 1s ease-in-out;
+	-moz-transition: all 1s ease-in-out;
+	-o-transition: all 1s ease-in-out;
+	transition: all 1s ease-in-out;
+	transition-delay: .1s;
+	-webkit-transition-delay: .1s;
+}
+
+/*gru*/
+#boxbasic.gru #one{
+	-webkit-transform: translate(105px,140px) rotate(135deg);
+	-moz-transform: translate(105px,140px) rotate(135deg);
+	-o-transform: translate(105px,140px) rotate(135deg);
+	-ms-transform: translate(105px,140px) rotate(135deg);
+	transform: translate(105px,140px) rotate(135deg);
+}
+
+#boxbasic.gru #two{
+	-webkit-transform: rotate(90deg) rotateX(180deg) translate(-85px,-60px);
+	-moz-transform: rotate(90deg) rotateX(180deg) translate(-85px,-60px);
+	-o-transform: rotate(90deg) rotateX(180deg) translate(-85px,-60px);
+	-ms-transform: rotate(90deg) scaleX(-1) translate(183px,60px);
+	transform: rotate(90deg) rotateX(180deg) translate(-85px,-60px);
+}
+
+#boxbasic.gru #three {
+	-webkit-transform: rotate(-135deg) translate(0px,-247px);
+	-moz-transform: rotate(-135deg) translate(0px,-247px);
+	-o-transform: rotate(-135deg) translate(0px,-247px);
+	-ms-transform: rotate(-135deg) translate(0px,-247px);
+	transform: rotate(-135deg) translate(0px,-247px);
+}
+
+#boxbasic.gru #four{
+	-webkit-transform: translate(-217px,-134px);
+	-moz-transform: translate(-217px,-134px);
+	-o-transform: translate(-217px,-134px);
+	-ms-transform: translate(-217px,-134px);
+	transform: translate(-217px,-134px);
+}
+
+#boxbasic.gru #five{
+	-webkit-transform: rotate(-45deg) translate(89px,-305px);
+	-moz-transform: rotate(-45deg) translate(89px,-305px);
+	-o-transform: rotate(-45deg) translate(89px,-305px);
+	-ms-transform: rotate(-45deg) translate(89px,-305px);
+	transform: rotate(-45deg) translate(89px,-305px);
+}
+
+#boxbasic.gru #six{
+	-webkit-transform: translate(137px,-76px) rotate(-180deg);
+	-moz-transform: translate(137px,-76px) rotate(-180deg);
+	-o-transform: translate(137px,-76px) rotate(-180deg);
+	-ms-transform: translate(137px,-76px) rotate(-180deg);
+	transform: translate(137px,-76px) rotate(-180deg);
+}
+
+#boxbasic.gru #seven{
+	-webkit-transform: rotate(180deg) translate(321px,133px);
+	-moz-transform: rotate(180deg) translate(321px,133px);
+	-o-transform: rotate(180deg) translate(321px,133px);
+	-ms-transform: rotate(180deg) translate(321px,133px);
+	transform: rotate(180deg) translate(321px,133px);
+}
+
+
+
+/*cammello */
+#boxbasic.cammello #one {
+	-webkit-transform: translate(23px,23px);
+	-moz-transform: translate(23px,23px);
+	-o-transform: translate(23px,23px);
+	-ms-transform: translate(23px,23px);
+	transform: translate(23px,23px);
+}
+
+#boxbasic.cammello #two {
+	-webkit-transform: rotateX(180deg) rotate(90deg) translate(27px,232px);
+	-moz-transform: rotateX(180deg) rotate(90deg) translate(27px,232px);
+	-o-transform: rotateX(180deg) rotate(90deg) translate(27px,232px);
+	-ms-transform: scaleX(-1) rotate(90deg) translate(70px,-231px);
+	transform: rotateX(180deg) rotate(90deg) translate(27px,232px);
+}
+
+#boxbasic.cammello #three {
+	-webkit-transform: rotate(-45deg) translate(-41px,-7px);
+	-moz-transform: rotate(-45deg) translate(-41px,-7px);
+	-o-transform: rotate(-45deg) translate(-41px,-7px);
+	-ms-transform: rotate(-45deg) translate(-41px,-7px);
+	transform: rotate(-45deg) translate(-41px,-7px);
+}
+
+#boxbasic.cammello #four {
+	-webkit-transform: translate(-180px,-181px);
+	-moz-transform: translate(-180px,-181px);
+	-o-transform: translate(-180px,-181px);
+	-ms-transform: translate(-180px,-181px);
+	transform: translate(-180px,-181px);
+}
+
+#boxbasic.cammello #five {
+	-webkit-transform: rotate(90deg) translate(-235px,233px);
+	-moz-transform: rotate(90deg) translate(-235px,233px);
+	-o-transform: rotate(90deg) translate(-235px,233px);
+	-ms-transform: rotate(90deg) translate(-235px,233px);
+	transform: rotate(90deg) translate(-235px,233px);
+}
+
+#boxbasic.cammello #six {
+	-webkit-transform: rotate(45deg) translate(25px,-176px);
+	-moz-transform: rotate(45deg) translate(25px,-176px);
+	-o-transform: rotate(45deg) translate(25px,-176px);
+	-ms-transform: rotate(45deg) translate(25px,-176px);
+	transform: rotate(45deg) translate(25px,-176px);
+}
+
+#boxbasic.cammello #seven {
+	-webkit-transform: rotate(-90deg) translate(443px,-437px);
+	-moz-transform: rotate(-90deg) translate(443px,-437px);
+	-o-transform: rotate(-90deg) translate(443px,-437px);
+	-ms-transform: rotate(-90deg) translate(443px,-437px);
+	transform: rotate(-90deg) translate(443px,-437px);
+}
+
+
+
+/*runner*/
+#boxbasic.runner #one {
+	-webkit-transform: rotate(90deg) translate(0px,-205px);
+	-moz-transform: rotate(90deg) translate(0px,-205px);
+	-o-transform: rotate(90deg) translate(0px,-205px);
+	-ms-transform: rotate(90deg) translate(0px,-205px);
+	transform: rotate(90deg) translate(0px,-205px);
+}
+
+#boxbasic.runner #two {
+	-webkit-transform: translate(206px,409px);
+	-moz-transform: translate(206px,409px);
+	-o-transform: translate(206px,409px);
+	-ms-transform: translate(206px,409px);
+	transform: translate(206px,409px);
+}
+
+#boxbasic.runner #three {
+	-webkit-transform: translate(-250px,310px) rotate(135deg);
+	-moz-transform: translate(-250px,310px) rotate(135deg);
+	-o-transform: translate(-250px,310px) rotate(135deg);
+	-ms-transform: translate(-250px,310px) rotate(135deg);
+	transform: translate(-250px,310px) rotate(135deg);
+}
+
+#boxbasic.runner #four {
+	-webkit-transform: translate(0px,-205px);
+	-moz-transform: translate(0px,-205px);
+	-o-transform: translate(0px,-205px);
+	-ms-transform: translate(0px,-205px);
+	transform: translate(0px,-205px);
+}
+
+#boxbasic.runner #five {
+	-webkit-transform: translate(-340px,204px) rotate(180deg);
+	-moz-transform: translate(-340px,204px) rotate(180deg);
+	-o-transform: translate(-340px,204px) rotate(180deg);
+	-ms-transform: translate(-340px,204px) rotate(180deg);
+	transform: translate(-340px,204px) rotate(180deg);
+}
+
+#boxbasic.runner #seven{
+	-webkit-transform: rotate(-90deg) translate(-256px,150px);
+	-moz-transform: rotate(-90deg) translate(-256px,150px);
+	-o-transform: rotate(-90deg) translate(-256px,150px);
+	-ms-transform: rotate(-90deg) translate(-256px,150px);
+	transform: rotate(-90deg) translate(-256px,150px);
+}
+
+
+/*cup*/
+#boxbasic.cup #one {
+	-webkit-transform: translate(28px,-8px) rotate(-45deg);
+	-moz-transform: translate(28px,-8px) rotate(-45deg);
+	-o-transform: translate(28px,-8px) rotate(-45deg);
+	-ms-transform: translate(28px,-8px) rotate(-45deg);
+	transform: translate(28px,-8px) rotate(-45deg);
+}
+
+#boxbasic.cup #two {
+	-webkit-transform: translate(0px,21px);
+	-moz-transform: translate(0px,21px);
+	-o-transform: translate(0px,21px);
+	-ms-transform: translate(0px,21px);
+	transform: translate(0px,21px);
+}
+
+#boxbasic.cup #three {
+	-webkit-transform: translate(-205px,-184px) rotate(90deg);
+	-moz-transform: translate(-205px,-184px) rotate(90deg);
+	-o-transform: translate(-205px,-184px) rotate(90deg);
+	-ms-transform: translate(-205px,-184px) rotate(90deg);
+	transform: translate(-205px,-184px) rotate(90deg);
+}
+
+#boxbasic.cup #four {
+	-webkit-transform: translate(4px,-183px);
+	-moz-transform: translate(4px,-183px);
+	-o-transform: translate(4px,-183px);
+	-ms-transform: translate(4px,-183px);
+	transform: translate(4px,-183px);
+}
+
+#boxbasic.cup #five {
+	-webkit-transform: translate(53px,-235px) rotate(-90deg);
+	-moz-transform: translate(53px,-235px) rotate(-90deg);
+	-o-transform: translate(53px,-235px) rotate(-90deg);
+	-ms-transform: translate(53px,-235px) rotate(-90deg);
+	transform: translate(53px,-235px) rotate(-90deg);
+}
+
+#boxbasic.cup #six {
+	-webkit-transform: translate(72px,-110px) rotate(-45deg);
+	-moz-transform: translate(72px,-110px) rotate(-45deg);
+	-o-transform: translate(72px,-110px) rotate(-45deg);
+	-ms-transform: translate(72px,-110px) rotate(-45deg);
+	transform: translate(72px,-110px) rotate(-45deg);
+}
+
+#boxbasic.cup #seven {
+	-webkit-transform: translate(-154px,155px) rotate(90deg);
+	-moz-transform: translate(-154px,155px) rotate(90deg);
+	-o-transform: translate(-154px,155px) rotate(90deg);
+	-ms-transform: translate(-154px,155px) rotate(90deg);
+	transform: translate(-154px,155px) rotate(90deg);
+}
+
+
+
+/*triangle*/
+#boxbasic.triangle #one {
+	-webkit-transform: rotate(-90deg) translate(-81px,-86px);
+	-moz-transform: rotate(-90deg) translate(-81px,-86px);
+	-o-transform: rotate(-90deg) translate(-81px,-86px);
+	-ms-transform: rotate(-90deg) translate(-81px,-86px);
+	transform: rotate(-90deg) translate(-81px,-86px);
+}
+
+#boxbasic.triangle #two {
+	-webkit-transform: translate(325px,285px);
+	-moz-transform: translate(325px,285px);
+	-o-transform: translate(325px,285px);
+	-ms-transform: translate(325px,285px);
+	transform: translate(325px,285px);
+}
+
+#boxbasic.triangle #three {
+	-webkit-transform: rotate(180deg) translate(-16px,-185px);
+	-moz-transform: rotate(180deg) translate(-16px,-185px);
+	-o-transform: rotate(180deg) translate(-16px,-185px);
+	-ms-transform: rotate(180deg) translate(-16px,-185px);
+	transform: rotate(180deg) translate(-16px,-185px);
+}
+
+#boxbasic.triangle #four {
+	-webkit-transform: translate(16px,-24px);
+	-moz-transform: translate(16px,-24px);
+	-o-transform: translate(16px,-24px);
+	-ms-transform: translate(16px,-24px);
+	transform: translate(16px,-24px);
+}
+
+#boxbasic.triangle #five {
+	-webkit-transform: rotate(-90deg) translate(75px,67px);
+	-moz-transform: rotate(-90deg) translate(75px,67px);
+	-o-transform: rotate(-90deg) translate(75px,67px);
+	-ms-transform: rotate(-90deg) translate(75px,67px);
+	transform: rotate(-90deg) translate(75px,67px);
+}
+#boxbasic.triangle #six {
+	-webkit-transform: rotate(-90deg) translate(125px,-86px);
+	-moz-transform: rotate(-90deg) translate(125px,-86px);
+	-o-transform: rotate(-90deg) translate(125px,-86px);
+	-ms-transform: rotate(-90deg) translate(125px,-86px);
+	transform: rotate(-90deg) translate(125px,-86px);
+}
+
+#boxbasic.triangle #seven {
+	-webkit-transform: rotate(90deg) translate(-74px,-66px);
+	-moz-transform: rotate(90deg) translate(-74px,-66px);
+	-o-transform: rotate(90deg) translate(-74px,-66px);
+	-ms-transform: rotate(90deg) translate(-74px,-66px);
+	transform: rotate(90deg) translate(-74px,-66px);
+}
+
+
+/*barca*/
+#boxbasic.barca #one {
+	-webkit-transform: translate(-43px,-63px) rotate(120deg);
+	-moz-transform: translate(-43px,-63px) rotate(120deg);
+	-o-transform: translate(-43px,-63px) rotate(120deg);
+	-ms-transform: translate(-43px,-63px) rotate(120deg);
+	transform: translate(-43px,-63px) rotate(120deg);
+}
+
+#boxbasic.barca #two{
+	-webkit-transform: translate(-13px,215px) rotate(-45deg);
+	-moz-transform: translate(-13px,215px) rotate(-45deg);
+	-o-transform: translate(-13px,215px) rotate(-45deg);
+	-ms-transform: translate(-13px,215px) rotate(-45deg);
+	transform: translate(-13px,215px) rotate(-45deg);
+}
+
+#boxbasic.barca #three {
+	-webkit-transform: translate(-300px,131px) rotate(135deg);
+	-moz-transform: translate(-300px,131px) rotate(135deg);
+	-o-transform: translate(-300px,131px) rotate(135deg);
+	-ms-transform: translate(-300px,131px) rotate(135deg);
+	transform: translate(-300px,131px) rotate(135deg);
+}
+
+#boxbasic.barca #four {
+	-webkit-transform: translate(66px,97px) rotate(45deg);
+	-moz-transform: translate(66px,97px) rotate(45deg);
+	-o-transform: translate(66px,97px) rotate(45deg);
+	-ms-transform: translate(66px,97px) rotate(45deg);
+	transform: translate(66px,97px) rotate(45deg);
+}
+
+#boxbasic.barca #five {
+	-webkit-transform: translate(278px,114px) rotate(135deg);
+	-moz-transform: translate(278px,114px) rotate(135deg);
+	-o-transform: translate(278px,114px) rotate(135deg);
+	-ms-transform: translate(278px,114px) rotate(135deg);
+	transform: translate(278px,114px) rotate(135deg);
+}
+
+#boxbasic.barca #six {
+	-webkit-transform: translate(178px,-166px) rotate(-150deg);
+	-moz-transform: translate(178px,-166px) rotate(-150deg);
+	-o-transform: translate(178px,-166px) rotate(-150deg);
+	-ms-transform: translate(178px,-166px) rotate(-150deg);
+	transform: translate(178px,-166px) rotate(-150deg);
+}
+
+#boxbasic.barca #seven {
+	-webkit-transform: translate(-95px,30px) rotate(-135deg);
+	-moz-transform: translate(-95px,30px) rotate(-135deg);
+	-o-transform: translate(-95px,30px) rotate(-135deg);
+	-ms-transform: translate(-95px,30px) rotate(-135deg);
+	transform: translate(-95px,30px) rotate(-135deg);
+}
+
+
+/*fish*/ 
+#boxbasic.fish #one {
+	-webkit-transform: translate(-155px,-55px) rotate(-45deg);
+	-moz-transform: translate(-155px,-55px) rotate(-45deg);
+	-o-transform: translate(-155px,-55px) rotate(-45deg);
+	-ms-transform: translate(-155px,-55px) rotate(-45deg);
+	transform: translate(-155px,-55px) rotate(-45deg);
+}
+
+#boxbasic.fish #two{
+	-webkit-transform: translate(69px,135px) rotate(45deg);
+	-moz-transform: translate(69px,135px) rotate(45deg);
+	-o-transform: translate(69px,135px) rotate(45deg);
+	-ms-transform: translate(69px,135px) rotate(45deg);
+	transform: translate(69px,135px) rotate(45deg);
+}
+
+#boxbasic.fish #three {
+	-webkit-transform: translate(2px,-94px) rotate(225deg);
+	-moz-transform: translate(2px,-94px) rotate(225deg);
+	-o-transform: translate(2px,-94px) rotate(225deg);
+	-ms-transform: translate(2px,-94px) rotate(225deg);
+	transform: translate(2px,-94px) rotate(225deg);
+}
+
+#boxbasic.fish #four {
+	-webkit-transform: translate(-214px,-124px) rotate(45deg);
+	-moz-transform: translate(-214px,-124px) rotate(45deg);
+	-o-transform: translate(-214px,-124px) rotate(45deg);
+	-ms-transform: translate(-214px,-124px) rotate(45deg);
+	transform: translate(-214px,-124px) rotate(45deg);
+}
+
+#boxbasic.fish #five {
+	-webkit-transform: translate(-147px,-181px) rotate(45deg);
+	-moz-transform: translate(-147px,-181px) rotate(45deg);
+	-o-transform: translate(-147px,-181px) rotate(45deg);
+	-ms-transform: translate(-147px,-181px) rotate(45deg);
+	transform: translate(-147px,-181px) rotate(45deg);
+}
+#boxbasic.fish #six {
+	-webkit-transform: translate(-257px,-302px) rotate(135deg);
+	-moz-transform: translate(-257px,-302px) rotate(135deg);
+	-o-transform: translate(-257px,-302px) rotate(135deg);
+	-ms-transform: translate(-257px,-302px) rotate(135deg);
+	transform: translate(-257px,-302px) rotate(135deg);
+}
+
+#boxbasic.fish #seven {
+	-webkit-transform: translate(-301px,-117px) rotate(45deg);
+	-moz-transform: translate(-301px,-117px) rotate(45deg);
+	-o-transform: translate(-301px,-117px) rotate(45deg);
+	-ms-transform: translate(-301px,-117px) rotate(45deg);
+	transform: translate(-301px,-117px) rotate(45deg);
+}
+
+/*horse*/ 
+#boxbasic.horse #one {
+	-webkit-transform: translate(-162px,-137px) rotate(-135deg);
+	-moz-transform: translate(-162px,-137px) rotate(-135deg);
+	-o-transform: translate(-162px,-137px) rotate(-135deg);
+	-ms-transform: translate(-162px,-137px) rotate(-135deg);
+	transform: translate(-162px,-137px) rotate(-135deg);
+}
+
+#boxbasic.horse #two{
+	-webkit-transform: translate(-438px,124px) rotateY(180deg) rotate(45deg);
+	-moz-transform: translate(-438px,124px) rotateY(180deg) rotate(45deg) ;
+	-o-transform: translate(-438px,124px) rotateY(180deg) rotate(45deg);
+	-ms-transform: translate(-438px,124px) rotateY(180deg) rotate(45deg);
+	transform: translate(-438px,124px) rotateY(180deg) rotate(45deg);
+}
+
+
+#boxbasic.horse #three {
+	-webkit-transform: translate(48px,-107px) rotate(0deg);
+	-moz-transform: translate(48px,-107px) rotate(0deg);
+	-o-transform: translate(48px,-107px) rotate(0deg);
+	-ms-transform: translate(48px,-107px) rotate(0deg);
+	transform: translate(48px,-107px) rotate(0deg);
+}
+
+#boxbasic.horse #four {
+	-webkit-transform: translate(-51px,-209px) rotate(90deg);
+	-moz-transform: translate(-51px,-209px) rotate(90deg);
+	-o-transform: translate(-51px,-209px) rotate(90deg);
+	-ms-transform: translate(-51px,-209px) rotate(90deg);
+	transform: translate(-51px,-209px) rotate(90deg);
+}
+
+#boxbasic.horse #five {
+	-webkit-transform: translate(114px,81px) rotate(-135deg);
+	-moz-transform: translate(114px,81px) rotate(-135deg);
+	-o-transform: translate(114px,81px) rotate(-135deg);
+	-ms-transform: translate(114px,81px) rotate(-135deg);
+	transform: translate(114px,81px) rotate(-135deg);
+}
+#boxbasic.horse #six {
+	-webkit-transform: translate(-50px,-210px) rotate(0deg);
+	-moz-transform: translate(-50px,-210px) rotate(0deg);
+	-o-transform: translate(-50px,-210px) rotate(0deg);
+	-ms-transform: translate(-50px,-210px) rotate(0deg);
+	transform: translate(-50px,-210px) rotate(0deg);
+}
+
+#boxbasic.horse #seven {
+	-webkit-transform: translate(-427px,-37px) rotate(90deg);
+	-moz-transform: translate(-427px,-37px) rotate(90deg);
+	-o-transform: translate(-427px,-37px) rotate(90deg);
+	-ms-transform: translate(-427px,-37px) rotate(90deg);
+	transform: translate(-427px,-37px) rotate(90deg);
+}
+
+/*random*/
+#boxbasic.random #one {
+	-webkit-transform: translate(-331px,-434px) rotate(80deg);
+	-moz-transform: translate(-331px,-434px) rotate(80deg);
+	-o-transform: translate(-331px,-434px) rotate(80deg);
+	-ms-transform: translate(-331px,-434px) rotate(80deg);
+	transform: translate(-331px,-434px) rotate(80deg);
+}
+
+#boxbasic.random #two {
+	-webkit-transform: translate(600px,-200px) rotateX(-180deg) rotate(270deg);
+	-moz-transform: translate(600px,-200px) rotateX(-180deg) rotate(270deg);
+	-o-transform: translate(600px,-200px) rotateX(-180deg) rotate(270deg);
+	-ms-transform: translate(600px,-200px) rotateX(-180deg) rotate(270deg);
+	transform: translate(600px,-200px) rotateX(-180deg) rotate(270deg)
+}
+
+#boxbasic.random #three{
+	-webkit-transform: translate(700px,200px) rotate(135deg);
+	-moz-transform: translate(700px,200px) rotate(135deg);
+	-o-transform: translate(700px,200px) rotate(135deg);
+	-ms-transform: translate(700px,200px) rotate(135deg);
+	transform: translate(700px,200px) rotate(135deg)
+}
+
+#boxbasic.random #four {
+	-webkit-transform: translate(120px,-300px) rotate(45deg);
+	-moz-transform: translate(120px,-300px) rotate(45deg);
+	-o-transform: translate(120px,-300px) rotate(45deg);
+	-ms-transform: translate(120px,-300px) rotate(45deg);
+	transform: translate(120px,-300px) rotate(45deg)
+}
+
+#boxbasic.random #five{
+	-webkit-transform: translate(-70px,-50px) rotate(-90deg);
+	-moz-transform: translate(-70px,-50px) rotate(-90deg);
+	-o-transform: translate(-70px,-50px) rotate(-90deg);
+	-ms-transform: translate(-70px,-50px) rotate(-90deg);
+	transform: translate(-70px,-50px) rotate(-90deg)
+}
+
+#boxbasic.random #six{
+	-webkit-transform: translate(150px,-50px) rotateY(180deg) rotate(20deg);
+	-moz-transform: translate(150px,-50px) rotateY(180deg) rotate(20deg);
+	-o-transform: translate(150px,-50px) rotateY(180deg) rotate(20deg);
+	-ms-transform: translate(150px,-50px) rotateY(180deg) rotate(20deg);
+	transform: translate(150px,-50px) rotateY(180deg) rotate(20deg);
+}
+#boxbasic.random #seven{
+	-webkit-transform: translate(150px,-125px) rotateY(170deg) rotate(-150deg);
+	-moz-transform: translate(150px,-125px) rotateY(170deg) rotate(-150deg);
+	-o-transform: translate(150px,-125px) rotateY(170deg) rotate(-150deg);
+	-ms-transform: translate(150px,-125px) rotateY(170deg) rotate(-150deg);
+	transform: translate(150px,-125px) rotateY(170deg) rotate(-150deg);
+}
+</style>
+
+</head>
+
+<div id="boxbasic" class='random'>
+	<div class="trianglebig-90" id="one"></div>
+	<div class="parallello" id="two"><div></div><div></div></div>
+	<div class="trianglemedium-45" id="three"></div>
+	<div class="square-45" id="four"><div></div><div></div></div>
+	<div class="trianglesmall-180" id="five"></div>
+	<div class="trianglebig" id="six"></div>
+	<div class="trianglesmall-270" id="seven"></div>
+</div>
+<script src="main.js"></script>
+<body>
+
+</html>
