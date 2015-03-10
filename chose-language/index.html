@@ -1,0 +1,814 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>chose language</title>
+<link rel="stylesheet" href="font-awesome-4.2.0/css/font-awesome.min.css">
+<script type="text/javascript" src="jquery-1.11.1.min.js"></script>
+<style>
+
+h2{
+    color: transparent;
+    text-shadow: 0px 0px 4px #fff;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+ul{
+    list-style: none;
+}
+    #home-header {
+        height: 420px;
+        overflow: hidden;
+        width: 100%;
+    }
+    /*背景颜色设置*/
+    .hero {
+        background: #2e1c3c; 
+        color: #fff;
+        position: relative;
+        text-align: center;
+    }
+    /*bubbles背景图层设置*/
+	.bubbles-container{
+        height: 100%;
+        overflow: hidden;
+        pointer-events: none;
+        position: absolute;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        width: 100%;
+    }
+    .bubbles-container .bubbles {
+         -webkit-animation: bubbleIn 1s 0.5s linear forwards;
+         -moz-animation: bubbleIn 1s 0.5s linear forwards;
+        animation: bubbleIn 1s 0.5s linear forwards; 
+        height: 100%;
+        opacity: 0.1;
+        position: absolute;
+    }
+    @-webkit-keyframes bubbleIn{
+        0%{opacity:0}
+        100%{opacity:.1}
+    }
+    @-moz-keyframes bubbleIn{
+        0%{opacity:0}
+        100%{opacity:.1}
+    }
+    @keyframes bubbleIn{
+        0%{opacity:0}
+        100%{opacity:.1}
+    }
+    .bubbles-container .bubbles img.small {
+        height: auto;
+        width: 5%;
+    }
+    .bubbles-container .bubbles img.medium {
+        height: auto;
+        width: 10%;
+    }
+    .bubbles-container .bubbles img.large {
+        height: auto;
+        width: 15%;
+    }
+    .bubbles-container .bubbles img {
+        padding: 3px;
+    }
+
+
+
+.container {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/*channel-text样式*/
+#channel-text>li {
+    display: inline;
+    opacity: 0;
+    position: absolute;
+    right: 0; 
+    left: 0;
+}
+#home-header h1 {
+    font-size: 40px;
+    font-weight: 700;
+    margin-top: 60px;
+}
+#channel-text {
+    display: inline-block;
+    height: 38px;
+    width: 88px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    -webkit-transition: width .2s ease-in-out;
+    -moz-transition: width .2s ease-in-out;
+    transition: width .2s ease-in-out;
+}
+/*变化字0-16*/
+#channel-text._0{width:88px;}
+#channel-text._0>li{
+    -webkit-animation:alertOut .2s linear forwards;
+    -moz-animation:alertOut .2s linear forwards;
+    -moz-animation:alertOut .2s linear forwards;
+    animation:alertOut .2s linear forwards;
+}
+#channel-text._0>li:nth-child(1){
+    -webkit-animation:alertIn .2s linear forwards;
+    -moz-animation:alertIn .2s linear forwards;
+    animation:alertIn .2s linear forwards;
+    visibility:visible;
+}
+#channel-text._1{width:224px;}
+#channel-text._1>li{
+    -webkit-animation:alertOut .2s linear forwards;
+    -moz-animation:alertOut .2s linear forwards;
+    animation:alertOut .2s linear forwards;
+}
+#channel-text._1>li:nth-child(2){
+    -webkit-animation:alertIn .2s linear forwards;
+    -moz-animation:alertIn .2s linear forwards;
+    animation:alertIn .2s linear forwards;
+    visibility:visible;
+}
+#channel-text._2{width:72px;}
+#channel-text._2>li{
+    -webkit-animation:alertOut .2s linear forwards;
+    -moz-animation:alertOut .2s linear forwards;
+    animation:alertOut .2s linear forwards
+}
+#channel-text._2>li:nth-child(3){
+    -webkit-animation:alertIn .2s linear forwards;
+    -moz-animation:alertIn .2s linear forwards;
+    animation:alertIn .2s linear forwards;
+    visibility:visible;
+}
+#channel-text._3{width:78px;}
+#channel-text._3>li{
+    -webkit-animation:alertOut .2s linear forwards;
+    -moz-animation:alertOut .2s linear forwards;
+    animation:alertOut .2s linear forwards
+}
+#channel-text._3>li:nth-child(4){
+    -webkit-animation:alertIn .2s linear forwards;
+    -moz-animation:alertIn .2s linear forwards;
+    animation:alertIn .2s linear forwards;
+    visibility:visible;
+}
+#channel-text._4{width:94px;}
+#channel-text._4>li{
+    -webkit-animation:alertOut .2s linear forwards;
+    -moz-animation:alertOut .2s linear forwards;
+    animation:alertOut .2s linear forwards;
+}
+#channel-text._4>li:nth-child(5){
+    -webkit-animation:alertIn .2s linear forwards;
+    -moz-animation:alertIn .2s linear forwards;
+    animation:alertIn .2s linear forwards;
+    visibility:visible;
+}
+#channel-text._5{width:140px;}
+#channel-text._5>li{
+    -webkit-animation:alertOut .2s linear forwards;
+    -moz-animation:alertOut .2s linear forwards;
+    animation:alertOut .2s linear forwards;
+}
+#channel-text._5>li:nth-child(6){
+    -webkit-animation:alertIn .2s linear forwards;
+    -moz-animation:alertIn .2s linear forwards;
+    animation:alertIn .2s linear forwards;
+    visibility:visible;
+}
+#channel-text._6{width:78px;}
+#channel-text._6>li{
+    -webkit-animation:alertOut .2s linear forwards;
+    -moz-animation:alertOut .2s linear forwards;
+    animation:alertOut .2s linear forwards;
+}
+#channel-text._6>li:nth-child(7){
+    -webkit-animation:alertIn .2s linear forwards;
+    -moz-animation:alertIn .2s linear forwards;
+    animation:alertIn .2s linear forwards;
+    visibility:visible;
+}
+#channel-text._7{width:126px;}
+#channel-text._7>li{
+    -webkit-animation:alertOut .2s linear forwards;
+    -moz-animation:alertOut .2s linear forwards;
+    animation:alertOut .2s linear forwards;
+}
+#channel-text._7>li:nth-child(8){
+    -webkit-animation:alertIn .2s linear forwards;
+    -moz-animation:alertIn .2s linear forwards;
+    animation:alertIn .2s linear forwards;
+    visibility:visible;
+}
+#channel-text._8{width:98px;}
+#channel-text._8>li{
+    -webkit-animation:alertOut .2s linear forwards;
+    -moz-animation:alertOut .2s linear forwards;
+    animation:alertOut .2s linear forwards;
+}
+#channel-text._8>li:nth-child(9){
+    -webkit-animation:alertIn .2s linear forwards;
+    -moz-animation:alertIn .2s linear forwards;
+    animation:alertIn .2s linear forwards;
+    visibility:visible;
+}
+#channel-text._9{width:136px;}
+#channel-text._9>li{
+    -webkit-animation:alertOut .2s linear forwards;
+    -moz-animation:alertOut .2s linear forwards;
+    animation:alertOut .2s linear forwards;
+}
+#channel-text._9>li:nth-child(10){
+    -webkit-animation:alertIn .2s linear forwards;
+    -moz-animation:alertIn .2s linear forwards;
+    animation:alertIn .2s linear forwards;
+    visibility:visible;
+}
+#channel-text._10{width:148px;}
+#channel-text._10>li{
+    -webkit-animation:alertOut .2s linear forwards;
+    -moz-animation:alertOut .2s linear forwards;
+    animation:alertOut .2s linear forwards;
+}
+#channel-text._10>li:nth-child(11){
+    -webkit-animation:alertIn .2s linear forwards;
+    -moz-animation:alertIn .2s linear forwards;
+    animation:alertIn .2s linear forwards;
+    visibility:visible;
+}
+#channel-text._11{width:134px;}
+#channel-text._11>li{
+    -webkit-animation:alertOut .2s linear forwards;
+    -moz-animation:alertOut .2s linear forwards;
+    animation:alertOut .2s linear forwards;
+}
+#channel-text._11>li:nth-child(12){
+    -webkit-animation:alertIn .2s linear forwards;
+    -moz-animation:alertIn .2s linear forwards;
+    animation:alertIn .2s linear forwards;
+    visibility:visible;
+}
+#channel-text._12{width:224px;}
+#channel-text._12>li{
+    -webkit-animation:alertOut .2s linear forwards;
+    -moz-animation:alertOut .2s linear forwards;
+    animation:alertOut .2s linear forwards
+}
+#channel-text._12>li:nth-child(13){
+    -webkit-animation:alertIn .2s linear forwards;
+    -moz-animation:alertIn .2s linear forwards;
+    animation:alertIn .2s linear forwards;
+    visibility:visible;
+}
+#channel-text._13{width:86px;}
+#channel-text._13>li{
+    -webkit-animation:alertOut .2s linear forwards;
+    -moz-animation:alertOut .2s linear forwards;
+    animation:alertOut .2s linear forwards
+}
+#channel-text._13>li:nth-child(14){
+    -webkit-animation:alertIn .2s linear forwards;
+    -moz-animation:alertIn .2s linear forwards;
+    animation:alertIn .2s linear forwards;
+    visibility:visible;
+}
+#channel-text._14{width:100px;}
+#channel-text._14>li{
+    -webkit-animation:alertOut .2s linear forwards;
+    -moz-animation:alertOut .2s linear forwards;
+    animation:alertOut .2s linear forwards;
+}
+#channel-text._14>li:nth-child(15){
+    -webkit-animation:alertIn .2s linear forwards;
+    -moz-animation:alertIn .2s linear forwards;
+    animation:alertIn .2s linear forwards;
+    visibility:visible;
+}
+#channel-text._15{width:172px;}
+#channel-text._15>li{
+    -webkit-animation:alertOut .2s linear forwards;
+    -moz-animation:alertOut .2s linear forwards;
+    animation:alertOut .2s linear forwards;
+}
+#channel-text._15>li:nth-child(16){
+    -webkit-animation:alertIn .2s linear forwards;
+    -moz-animation:alertIn .2s linear forwards;
+    animation:alertIn .2s linear forwards;
+    visibility:visible;
+}
+#channel-text._16{width:92px}
+#channel-text._16>li{
+    -webkit-animation:alertOut .2s linear forwards;
+    -moz-animation:alertOut .2s linear forwards;
+    animation:alertOut .2s linear forwards;
+    }
+#channel-text._16>li:nth-child(17){
+    -webkit-animation:alertIn .2s linear forwards;
+    -moz-animation:alertIn .2s linear forwards;
+    animation:alertIn .2s linear forwards;
+    visibility:visible;
+}
+
+/*alertIn*/
+@-webkit-keyframes alertIn{
+    0%{opacity:0;-webkit-transform:scale3d(0.5,.5,1);transform:scale3d(0.5,.5,1)}
+    60%{opacity:1;-webkit-transform:scale3d(1.1,1.1,1);transform:scale3d(1.1,1.1,1)}
+    100%{opacity:1;-webkit-transform:scale3d(1,1,1);transform:scale3d(1,1,1)}
+}
+@-moz-keyframes alertIn{
+    0%{opacity:0;-moz-transform:scale3d(0.5,.5,1);transform:scale3d(0.5,.5,1)}
+    60%{opacity:1;-moz-transform:scale3d(1.1,1.1,1);transform:scale3d(1.1,1.1,1)}
+    100%{opacity:1;-moz-transform:scale3d(1,1,1);transform:scale3d(1,1,1)}
+}
+@keyframes alertIn{
+    0%{opacity:0;-webkit-transform:scale3d(0.5,.5,1);transform:scale3d(0.5,.5,1)}
+    60%{opacity:1;-webkit-transform:scale3d(1.1,1.1,1);transform:scale3d(1.1,1.1,1)}
+    100%{opacity:1;-webkit-transform:scale3d(1,1,1);transform:scale3d(1,1,1)}
+}
+/*alertOut*/
+@-webkit-keyframes alertOut{
+    0%{opacity:1;-webkit-transform:scale3d(1,1,1);transform:scale3d(1,1,1)}
+    100%{opacity:0;-webkit-transform:scale3d(0.5,.5,1);transform:scale3d(0.5,.5,1)}
+}
+@-moz-keyframes alertOut{
+    0%{opacity:1;-moz-transform:scale3d(1,1,1);transform:scale3d(1,1,1)}
+    100%{opacity:0;-moz-transform:scale3d(0.5,.5,1);transform:scale3d(0.5,.5,1)}
+}
+@keyframes alertOut{
+    0%{opacity:1;-webkit-transform:scale3d(1,1,1);transform:scale3d(1,1,1)}
+    100%{opacity:0;-webkit-transform:scale3d(0.5,.5,1);transform:scale3d(0.5,.5,1)}
+}
+
+/*channer图表样式设置*/
+#channel-images {
+height: 160px;
+list-style-type: none;
+margin: 40px auto 0;
+padding: 0;
+position: relative;
+z-index: 1;
+width: 465px;
+}
+#channel-images>li{
+    background:-webkit-linear-gradient(top, #8d5bb3, rgba(128,78,168,.75)) 0 100%;
+    background:-moz-linear-gradient(top, #8d5bb3, rgba(128,78,168,.75)) 0 100%;
+    background:linear-gradient(to bottom,#8d5bb3,rgba(128,78,168,.75)) 0 100%;
+    background-size:70px 140px;
+    border-radius:50%;
+    box-shadow:inset 0 1px 0 rgba(255,255,255,.3);
+    height:70px;
+    width:70px;
+    position:absolute;
+    -webkit-transition:opacity .2s,
+    -webkit-transform .4s cubic-bezier(0.19,1,.22,1);
+    -moz-transition:opacity .2s,
+    -moz-transform .4s cubic-bezier(0.19,1,.22,1);
+    transition:opacity .2s,
+    transform .4s cubic-bezier(0.19,1,.22,1);
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+}
+#channel-images>li:nth-child(1){
+    left:105px;top:170px;
+}
+#channel-images>li:nth-child(2){
+    left:140px;top:140px;
+}
+#channel-images>li:nth-child(3){
+    left:175px;top:130px;
+}
+#channel-images>li:nth-child(4){
+    left:210px;top:130px;
+}
+#channel-images>li:nth-child(5){
+    left:245px;top:140px;
+}
+#channel-images>li:nth-child(6){
+    left:280px;top:170px;
+}
+#channel-images>li:nth-child(7){
+    left:145px;top:170px;
+}
+#channel-images>li:nth-child(8){
+    left:0;top:160px;margin:0 auto;right:0;
+}
+#channel-images>li:nth-child(9){
+    right:145px;top:170px;
+}
+#channel-images>li:nth-child(n+10){
+    left:0;margin:0 auto;opacity:0;right:0;
+    -webkit-transform:translate3d(0,240px,0);
+    transform:translate3d(0,240px,0);
+}
+.inner #channel-images>li:nth-child(n+10){
+    opacity:1;
+}
+@media (max-width:700px){
+    #channel-images>li{
+        display:inline-block;
+        margin:0 10px 35px!important;
+        opacity:1!important;
+        position:relative;top:auto!important;
+        right:auto!important;left:auto!important;
+        -webkit-transform:translate3d(0,0,0)!important;
+        transform:translate3d(0,0,0)!important;
+        -webkit-transition:none;
+        transition:none;
+    }
+}
+#home-header.in #channel-images>li:nth-child(1){
+    -webkit-transform:translate3d(-100px,-100px,0);
+    transform:translate3d(-100px,-100px,0)
+}
+#home-header.in #channel-images>li:nth-child(2){
+    -webkit-transform:translate3d(-70px,-125px,0);
+    transform:translate3d(-70px,-125px,0)
+}
+#home-header.in #channel-images>li:nth-child(3){
+    -webkit-transform:translate3d(-25px,-130px,0);
+    transform:translate3d(-25px,-130px,0)
+}
+#home-header.in #channel-images>li:nth-child(4){
+    -webkit-transform:translate3d(25px,-130px,0);
+    transform:translate3d(25px,-130px,0)
+}
+#home-header.in #channel-images>li:nth-child(5){
+    -webkit-transform:translate3d(70px,-125px,0);
+    transform:translate3d(70px,-125px,0)
+}
+#home-header.in #channel-images>li:nth-child(6){
+    -webkit-transform:translate3d(100px,-100px,0);
+    transform:translate3d(100px,-100px,0)
+}
+#home-header.in #channel-images>li:nth-child(7){
+    -webkit-transform:translate3d(-30px,-85px,0);
+    transform:translate3d(-30px,-85px,0)
+}
+#home-header.in #channel-images>li:nth-child(8){
+    -webkit-transform:translate3d(0,-90px,0);
+    transform:translate3d(0,-90px,0)
+}
+#home-header.in #channel-images>li:nth-child(9){
+    -webkit-transform:translate3d(30px,-85px,0);
+    transform:translate3d(30px,-85px,0)
+}
+@media (max-width:500px){
+    #home-header.in #channel-images>li:nth-child(1){
+        -webkit-transform:translate3d(-80px,-100px,0);
+        transform:translate3d(-80px,-100px,0)
+    }
+    #home-header.in #channel-images>li:nth-child(2){
+        -webkit-transform:translate3d(-60px,-125px,0);
+        transform:translate3d(-60px,-125px,0)
+    }
+    #home-header.in #channel-images>li:nth-child(3){
+        -webkit-transform:translate3d(-15px,-130px,0);
+        transform:translate3d(-15px,-130px,0)
+    }
+    #home-header.in #channel-images>li:nth-child(4){
+        -webkit-transform:translate3d(35px,-130px,0);
+        transform:translate3d(35px,-130px,0)
+    }
+    #home-header.in #channel-images>li:nth-child(5){
+        -webkit-transform:translate3d(80px,-125px,0);
+        transform:translate3d(80px,-125px,0)
+    }
+    #home-header.in #channel-images>li:nth-child(6){
+        -webkit-transform:translate3d(100px,-100px,0);
+        transform:translate3d(100px,-100px,0)
+    }
+    #home-header.in #channel-images>li:nth-child(7){
+        -webkit-transform:translate3d(-35px,-85px,0);
+        transform:translate3d(-35px,-85px,0)
+    }
+    #home-header.in #channel-images>li:nth-child(8){
+        -webkit-transform:translate3d(0,-90px,0);
+        transform:translate3d(0,-90px,0)
+    }
+    #home-header.in #channel-images>li:nth-child(9){
+        -webkit-transform:translate3d(30px,-85px,0);
+        transform:translate3d(30px,-85px,0)
+    }
+}
+#home-header.inner #channel-images>li{
+    -webkit-transition:opacity .2s,-webkit-transform .2s ease-in-out;
+    transition:opacity .2s,transform .2s ease-in-out
+}
+#home-header.inner #channel-images>li:nth-child(1){
+    -webkit-transform:translate3d(-195px,-170px,0);
+    transform:translate3d(-195px,-170px,0)
+}
+#home-header.inner #channel-images>li:nth-child(2){
+    -webkit-transform:translate3d(-115px,-140px,0);
+    transform:translate3d(-115px,-140px,0)
+}
+#home-header.inner #channel-images>li:nth-child(3){
+    -webkit-transform:translate3d(-35px,-130px,0);
+    transform:translate3d(-35px,-130px,0)
+}
+#home-header.inner #channel-images>li:nth-child(4){
+    -webkit-transform:translate3d(45px,-130px,0);
+    transform:translate3d(45px,-130px,0)
+}
+#home-header.inner #channel-images>li:nth-child(5){
+    -webkit-transform:translate3d(125px,-140px,0);
+    transform:translate3d(125px,-140px,0)
+}
+#home-header.inner #channel-images>li:nth-child(6){
+    -webkit-transform:translate3d(205px,-170px,0);
+    transform:translate3d(205px,-170px,0)
+}
+#home-header.inner #channel-images>li:nth-child(7){
+    -webkit-transform:translate3d(-235px,-35px,0);
+    transform:translate3d(-235px,-35px,0)
+}
+#home-header.inner #channel-images>li:nth-child(8){
+    -webkit-transform:translate3d(-172px,-25px,0);
+    transform:translate3d(-172px,-25px,0)
+}
+#home-header.inner #channel-images>li:nth-child(9){
+    -webkit-transform:translate3d(-110px,-35px,0);
+    transform:translate3d(-110px,-35px,0)
+}
+#home-header.inner #channel-images>li:nth-child(10){
+    -webkit-transform:translate3d(57px,135px,0);
+    transform:translate3d(57px,135px,0)
+}
+#home-header.inner #channel-images>li:nth-child(11){
+    -webkit-transform:translate3d(172px,135px,0);
+    transform:translate3d(172px,135px,0)
+}
+#home-header.inner #channel-images>li:nth-child(12){
+    -webkit-transform:translate3d(287px,135px,0);
+    transform:translate3d(287px,135px,0)
+}
+#home-header.inner #channel-images>li:nth-child(13){
+    -webkit-transform:translate3d(-287px,270px,0);
+    transform:translate3d(-287px,270px,0)
+}
+#home-header.inner #channel-images>li:nth-child(14){
+    -webkit-transform:translate3d(-172px,270px,0);
+    transform:translate3d(-172px,270px,0)
+}
+#home-header.inner #channel-images>li:nth-child(15){
+    -webkit-transform:translate3d(-57px,270px,0);
+    transform:translate3d(-57px,270px,0)
+}
+#home-header.inner #channel-images>li:nth-child(16){
+    -webkit-transform:translate3d(57px,270px,0);
+    transform:translate3d(57px,270px,0)}
+#channel-images>li:hover{background-position:0 0;}
+#channel-images>li:active{margin-top:1px;}
+/*#channel-images>li:after{
+    background:rgba(255,255,255,.2);
+    border-radius:50%;
+    border-top:2px solid rgba(0,0,0,.2);
+    box-shadow:0 1px 0 rgba(255,255,255,.3);
+    content:'';
+    display:block;
+    height:58px;
+    pointer-events:none;
+    position:absolute;
+    top:5px;
+    left:6px;
+    width:58px
+}*/
+#channel-images>li img{display:block;height:58px;margin:5px auto;width:58px;}
+#channel-images a{display:block;}
+#channel-images a:after{
+    border-radius:18px;
+    color:#eee;
+    content:attr(data-title);
+    display:inline-block;
+    font-size:14px;
+    height:24px;
+    line-height:24px;
+    margin:5px -100% 0;
+    opacity:0;padding:0 10px;
+    pointer-events:none;position:absolute;
+    right:0;left:0;
+    -webkit-transition:opacity .2s cubic-bezier(0.19,1,.22,1);
+    transition:opacity .2s cubic-bezier(0.19,1,.22,1);
+    white-space:nowrap
+}
+#home-header.inner #channel-images>li {
+-webkit-transition: opacity .2s,-webkit-transform .2s ease-in-out;
+transition: opacity .2s,transform .2s ease-in-out;
+}
+.inner #channel-images a:after {
+opacity: 1;
+-webkit-transition: opacity .3s .1s ease-in-out;
+transition: opacity .3s .1s ease-in-out;
+}
+
+#home-header>.fa-chevron-right {
+    background: -webkit-linear-gradient(top, #8d5bb3, rgba(128,78,168,.75)) 0 100%;
+    background: linear-gradient(to bottom,#8d5bb3,rgba(128,78,168,.75)) 0 100%;
+    border-radius: 50%;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.3);
+    color: rgba(0,0,0,.2);
+    cursor: pointer;
+    display: inline-block;
+    font-size: 28px;
+    height: 36px;
+    line-height: 36px;
+    margin: 5px auto;
+    opacity: .5;
+    position: absolute;
+    right: 0;
+    /*top: auto;
+    bottom: 200px;*/
+    left: 0;
+    -webkit-transition: opacity .1s,-webkit-transform .4s cubic-bezier(0.19,1,.22,1);
+    transition: opacity .1s,transform .4s cubic-bezier(0.19,1,.22,1);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    width: 36px;
+}
+/*点击之前按钮*/
+#home-header>.fa-chevron-right:hover {
+opacity: .9;
+text-decoration: none;
+}
+#home-header>.fa-chevron-right:before {
+display: block;
+-webkit-transition: -webkit-transform .5s ease-in-out;
+transition: transform .5s ease-in-out;
+-webkit-transform: rotate3d(0,0,1,90deg);
+transform: rotate3d(0,0,1,90deg);
+}
+/*点击之后*/
+#home-header.inner>.fa-chevron-right {
+    -webkit-transform: translate3d(0,230px,0);
+    transform: translate3d(0,230px,0);
+}
+
+#home-header.inner>.fa-chevron-right:before {
+    -webkit-transform: rotate3d(0,0,1,-90deg);
+    transform: rotate3d(0,0,1,-90deg);
+}
+.fa-chevron-right:before {
+    text-align: center;
+    padding-top: 4px;
+}
+.page2{
+    width: 100%;
+    height: 600px;
+    background: #fff;
+    z-index: 1;
+}
+.fa.fa-cog.fa-spin {cursor: pointer;
+        color: #00C8D7;
+        font-size: 400px;
+        position: absolute;
+        right: 0;
+        top: 230px;
+}
+.fa-spin {
+        animation:  fa-spin 50s infinite linear;
+        -moz-animation:  fa-spin 50s infinite linear;
+        -webkit-animation:  fa-spin 50s infinite linear;
+}
+ </style>
+
+</head>
+
+<body>
+<section id="home-header" class="hero in in">
+  <div class="bubbles-container">
+    <div class="bubbles isotope" style="position: relative; overflow: hidden; height: 639px;">
+      <img class="bubble small isotope-item" src="images/search.svg" style="position: absolute; left: 0px; top: 0px; transform: translate3d(0px, 0px, 0px);">
+      <img class="bubble medium reverse isotope-item" src="images/thumbs-up.svg" style="position: absolute; left: 0px; top: 0px; transform: translate3d(71px, 0px, 0px);">
+      <img class="bubble large isotope-item" src="images/lightbulb.svg" style="position: absolute; left: 0px; top: 0px; transform: translate3d(213px, 0px, 0px);">
+      <img class="bubble small reverse isotope-item" src="images/cog.svg" style="position: absolute; left: 0px; top: 0px; transform: translate3d(426px, 0px, 0px);">
+      <img class="bubble medium isotope-item" src="images/chat-cutout.svg" style="position: absolute; left: 0px; top: 0px; transform: translate3d(497px, 0px, 0px);">
+      <img class="bubble large reverse isotope-item" src="images/globe.svg" style="position: absolute; left: 0px; top: 0px; transform: translate3d(639px, 0px, 0px);">
+      <img class="bubble small isotope-item" src="images/world.svg" style="position: absolute; left: 0px; top: 0px; transform: translate3d(852px, 0px, 0px);">
+      <img class="bubble medium reverse isotope-item" src="images/jquery.svg" style="position: absolute; left: 0px; top: 0px; transform: translate3d(923px, 0px, 0px);">
+      <img class="bubble large isotope-item" src="images/cog.svg" style="position: absolute; left: 0px; top: 0px; transform: translate3d(1065px, 0px, 0px);">
+      <img class="bubble small reverse isotope-item" src="images/codeigniter.svg" style="position: absolute; left: 0px; top: 0px; transform: translate3d(1278px, 0px, 0px);">
+      <img class="bubble medium isotope-item" src="images/arrow.svg" style="position: absolute; left: 0px; top: 0px; transform: translate3d(1278px, 71px, 0px);">
+      <img class="bubble large reverse isotope-item" src="images/chat-bubble.svg" style="position: absolute; left: 0px; top: 0px; transform: translate3d(426px, 86px, 0px);">
+      <img class="bubble small isotope-item" src="images/connection.svg" style="position: absolute; left: 0px; top: 0px; transform: translate3d(0px, 71px, 0px);">
+      <img class="bubble medium reverse isotope-item" src="images/display.svg" style="position: absolute; left: 0px; top: 0px; transform: translate3d(0px, 142px, 0px);">
+      <img class="bubble large isotope-item" src="images/expression-engine.svg" style="position: absolute; left: 0px; top: 0px; transform: translate3d(852px, 142px, 0px);">
+      <img class="bubble small reverse isotope-item" src="images/heart.svg" style="position: absolute; left: 0px; top: 0px; transform: translate3d(142px, 142px, 0px);">
+      <img class="bubble small isotope-item" src="images/search.svg" style="position: absolute; left: 0px; top: 0px; transform: translate3d(142px, 200px, 0px);">
+      <img class="bubble medium reverse isotope-item" src="images/thumbs-up.svg" style="position: absolute; left: 0px; top: 0px; transform: translate3d(213px, 213px, 0px);">
+      <img class="bubble large isotope-item" src="images/lightbulb.svg" style="position: absolute; left: 0px; top: 0px; transform: translate3d(639px, 213px, 0px);">
+      <img class="bubble small reverse isotope-item" src="images/cog.svg" style="position: absolute; left: 0px; top: 0px; transform: translate3d(355px, 213px, 0px);">
+      <img class="bubble medium isotope-item" src="images/chat-cutout.svg" style="position: absolute; left: 0px; top: 0px; transform: translate3d(1065px, 214px, 0px);">
+      <img class="bubble large reverse isotope-item" src="images/globe.svg" style="position: absolute; left: 0px; top: 0px; transform: translate3d(426px, 264px, 0px);">
+      <img class="bubble small isotope-item" src="images/world.svg" style="position: absolute; left: 0px; top: 0px; transform: translate3d(1207px, 214px, 0px);">
+      <img class="bubble medium reverse isotope-item" src="images/jquery.svg" style="position: absolute; left: 0px; top: 0px; transform: translate3d(0px, 270px, 0px);">
+      <img class="bubble large isotope-item" src="images/cog.svg" style="position: absolute; left: 0px; top: 0px; transform: translate3d(1207px, 285px, 0px);">
+      <img class="bubble small reverse isotope-item" src="images/codeigniter.svg" style="position: absolute; left: 0px; top: 0px; transform: translate3d(142px, 271px, 0px);">
+      <img class="bubble medium isotope-item" src="images/arrow.svg" style="position: absolute; left: 0px; top: 0px; transform: translate3d(1065px, 300px, 0px);">
+      <img class="bubble large reverse isotope-item" src="images/chat-bubble.svg" style="position: absolute; left: 0px; top: 0px; transform: translate3d(142px, 355px, 0px);">
+      <img class="bubble small isotope-item" src="images/connection.svg" style="position: absolute; left: 0px; top: 0px; transform: translate3d(355px, 284px, 0px);">
+      <img class="bubble medium reverse isotope-item" src="images/display.svg" style="position: absolute; left: 0px; top: 0px; transform: translate3d(852px, 355px, 0px);">
+      <img class="bubble large isotope-item" src="images/expression-engine.svg" style="position: absolute; left: 0px; top: 0px; transform: translate3d(639px, 426px, 0px);">
+      <img class="bubble small reverse isotope-item" src="images/heart.svg" style="position: absolute; left: 0px; top: 0px; transform: translate3d(355px, 355px, 0px);">
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <h1>
+          Run
+          <ul id="channel-text" class="_0">
+            <li>Your</li>
+            <li>javascript</li>
+            <li>C++</li>
+            <li>Java</li>
+            <li>Rails</li>
+            <li>Node.js</li>
+            <li>PHP</li>
+            <li>jQuery</li>
+            <li>Css</li>
+            <li>Django</li>
+            <li>express</li>
+            <li>Python</li>
+            <li>CodeIgniter</li>
+            <li>.NET</li>
+            <li>Flask</li>
+            <li>CakePHP</li>
+            <li>Bash</li>
+          </ul>
+          Code Online
+        </h1>
+        <h2>Git Your Stack to Get Started</h2>
+        <ul id="channel-images">
+          
+          <li><a href="javascript:;" data-title="javascript"><img src="images/icon-javascript.svg" alt="javascript" data-view="channel_image" data-name="javascript"></a></li>
+          <li><a href="javascript:;" data-title="C++"><img src="images/icon-c++.svg" alt="c++" data-view="channel_image" data-name="C++"></a></li>
+          <li><a href="javascript:;" data-title="Java"><img src="images/icon-java.svg" alt="java" data-view="channel_image" data-name="Java"></a></li>
+          <li><a href="javascript:;" data-title="Ruby-on-Rails"><img src="images/icon-ruby-on-rails.svg" alt="ruby-on-rails" data-view="channel_image" data-name="Ruby-on-Rails"></a></li>
+          <li><a href="javascript:;" data-title="Node.js"><img src="images/icon-node.js.svg" alt="node.js" data-view="channel_image" data-name="Node.js"></a></li>
+          <li><a href="javascript:;" data-title="PHP"><img src="images/icon-php.svg" alt="php" data-view="channel_image" data-name="PHP"></a></li>
+          <li><a href="javascript:;" data-title="jQuery"><img src="images/icon-jquery.svg" alt="jquery" data-view="channel_image" data-name="jQuery"></a></li>
+          <li><a href="javascript:;" data-title="Css"><img src="images/icon-css.svg" alt="css" data-view="channel_image" data-name="Css"></a></li>
+          <li><a href="javascript:;" data-title="Django"><img src="images/icon-django.svg" alt="django" data-view="channel_image" data-name="Django"></a></li>
+          <li><a href="javascript:;" data-title="express"><img src="images/icon-express.svg" alt="express" data-view="channel_image" data-name="express"></a></li>
+          <li><a href="javascript:;" data-title="Python"><img src="images/icon-python.svg" alt="python" data-view="channel_image" data-name="Python"></a></li>
+          <li><a href="javascript:;" data-title="CodeIgniter"><img src="images/icon-codeigniter.svg" alt="codeigniter" data-view="channel_image" data-name="CodeIgniter"></a></li>
+          <li><a href="javascript:;" data-title=".NET"><img src="images/icon-.net.svg" alt=".net" data-view="channel_image" data-name=".NET"></a></li>
+          <li><a href="javascript:;" data-title="Flask"><img src="images/icon-flask.svg" alt="flask" data-view="channel_image" data-name="Flask"></a></li>
+          <li><a href="javascript:;" data-title="CakePHP"><img src="images/icon-cakephp.svg" alt="cakephp" data-view="channel_image" data-name="CakePHP"></a></li>
+          <li><a href="javascript:;" data-title="Bash"><img src="images/icon-bash.svg" alt="bash" data-view="channel_image" data-name="Bas"></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="gBtn fa-chevron-right fa"></div>
+  <div class="fa fa-cog fa-spin"></div>
+</section>
+<div class="page2">`</div>
+
+
+<script type="text/javascript">
+  var flag=0;
+  var cIndex=0;
+   $('.gBtn').click(function(event) {
+      if(flag===0){
+        $('#home-header').removeClass('in').addClass('inner');
+        $('#channel-images').css('height', '360px');
+        $('#home-header').css('height', '620px');
+        $('.gBtn').css('top', '340px');
+        flag=1;
+      }
+      else{
+        $('#home-header').removeClass('inner').addClass('in');
+        $('#channel-images').css('height', '160px');
+        $('#home-header').css('height', '420px');
+        $('.gBtn').css('top', 'auto');
+
+         flag=0;
+
+      }
+   });
+   $("#channel-images li").mouseenter(function() {
+     cIndex=$(this).index()+1;
+     $('#channel-text').removeClass().addClass('_'+cIndex)
+   })
+   $('#channel-images').mouseleave(function(){
+    $('#channel-text').removeClass().addClass('_0');
+   })
+    
+</script>
+</body>
+</html>
