@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <meta name="keywords" content="html5 javscript 音乐可视化">
+    <meta name="description" content="使用html5的新技术，讲音乐可视化，通过区别以往的形式来展现音乐">
+  </head>
+  <body>
+      <header>
+          <h1><%= title %></h1>
+          <ul class="type" id='typeList'>
+              <li data-type="dot">Dot</li>
+              <li data-type="column" class="selected">Column</li>
+              <li data-type="3D">3D</li>
+          </ul>
+          <p>
+              <label>Volume <input id="volume" type="range" name="" value="60" min="0" max="100"></label>
+          </p>
+      </header>
+      <div class="left">
+          <div id="add">添加本地歌曲</div>
+          <input type='file' id='loadMusic'>
+          <ul id="list">
+             <% music.forEach(function(name){%> 
+                <li title='<%= name %>'><%= name %></li>
+             <%})%>
+          </ul>
+      </div>
+      <div class="right" id="box">
+        <img class='loading' src="images/loading.gif">
+      </div>
+
+    <script type="text/javascript" src="/javascripts/jquery.min.js"></script>
+    <script type="text/javascript" src="/javascripts/three.min.js"></script>
+    <script type="text/javascript" src="/javascripts/MusicVisualizer.js"></script>
+    <script type="text/javascript" src="/javascripts/OrbitControls.js"></script>
+    <script type="text/javascript" src="/javascripts/main.js"></script>
+
+  </body>
+</html>
