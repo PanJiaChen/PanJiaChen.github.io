@@ -108,7 +108,7 @@ $("#list").on("click", "li", function() {
     $(".loading").show();
     $(this).siblings().removeClass('selected');
     $(this).addClass('selected');
-    mv.play('media/' + $(this).attr('title'));
+    mv.play('public/media/' + $(this).attr('title'));
 })
 
 //变化音量

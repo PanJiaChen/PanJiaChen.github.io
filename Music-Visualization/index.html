@@ -1,30 +1,41 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    
-
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-
-    <title>Panjiachen.GitHub.io by PanJiaChen</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <title>Music-Visualization</title>
+    <link rel='stylesheet' href='public/stylesheets/style.css' />
+    <meta name="keywords" content="html5 javscript 音乐可视化">
+    <meta name="description" content="使用html5的新技术，讲音乐可视化，通过区别以往的形式来展现音乐">
   </head>
-
   <body>
-    <header>
-      <div class="inner">
-        <h1>Panjiachen.GitHub.io</h1>
-        <h2>Pjc</h2>
-        <a href="https://github.com/PanJiaChen" class="button"><small>Follow me on</small> GitHub</a>
+      <header>
+          <h1>Music-Visualization</h1>
+          <ul class="type" id='typeList'>
+              <li data-type="dot">Dot</li>
+              <li data-type="column" class="selected">Column</li>
+              <li data-type="3D">3D</li>
+          </ul>
+          <p>
+              <label>Volume <input id="volume" type="range" name="" value="60" min="0" max="100"></label>
+          </p>
+      </header>
+      <div class="left">
+          <div id="add">添加本地歌曲</div>
+          <input type='file' id='loadMusic'>
+          <ul id="list">
+                <li title='Happy.mp3'>Happy.mp3</li>
+          </ul>
       </div>
-    </header>
+      <div class="right" id="box">
+        <img class='loading' src="public/images/loading.gif">
+      </div>
 
+    <script type="text/javascript" src="public/javascripts/jquery.min.js"></script>
+    <script type="text/javascript" src="public/javascripts/three.min.js"></script>
+    <script type="text/javascript" src="public/javascripts/MusicVisualizer.js"></script>
+    <script type="text/javascript" src="public/javascripts/OrbitControls.js"></script>
+    <script type="text/javascript" src="public/javascripts/main.js"></script>
 
-
-
-  
   </body>
 </html>
