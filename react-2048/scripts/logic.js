@@ -7,22 +7,31 @@ gridContainerWidth = 440;
 cellSpace = 5;
 cellSideLength = 100;
 
+var globalSize = 4;
+
 function getPos(i) {
     return cellSpace + i * (cellSpace * 2 + cellSideLength);
 }
 
 var Game = function() {
     this.score = 0;
+    this.size = globalSize;
     this.bestScore = window.localStorage.getItem('bestScore');
     this.bestScore = this.bestScore ? this.bestScore : 0;
-    this.gd = this.initNum(Game.size);
+    this.gd = this.initNum(this.size);
     for (i = 0; i < 2; i++) {
         this.checkGameStatusAndAddNum();
     }
     this.setPositions();
 }
 
-Game.size = 4;
+Game.prototype.setSize = function(size) {
+    globalSize = size;
+}
+
+Game.prototype.focusGame = function(size) {
+    document.body.focus();
+}
 
 Game.prototype.initNum = function(n) {
     var gameMap = [];
@@ -122,12 +131,12 @@ var rotateLeft = function(matrix) {
 
 Game.prototype.moveLeft = function() {
     var hasChanged = false;
-    for (var row = 0; row < Game.size; ++row) {
+    for (var row = 0; row < this.size; ++row) {
         var currentRow = this.gd[row].filter(function(tile) {
             return tile.value != 0;
         });
         var resultRow = [];
-        for (var target = 0; target < Game.size; ++target) {
+        for (var target = 0; target < this.size; ++target) {
             var targetTile = currentRow.length ? currentRow.shift() : this.addTile();
             if (currentRow.length > 0 && currentRow[0].value == targetTile.value) {
                 var tile1 = targetTile;
@@ -145,6 +154,7 @@ Game.prototype.moveLeft = function() {
                 }
             }
             resultRow[target] = targetTile;
+
             hasChanged |= (targetTile.value != this.gd[row][target].value);
         }
         this.gd[row] = resultRow;

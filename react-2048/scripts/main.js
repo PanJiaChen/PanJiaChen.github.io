@@ -89,6 +89,7 @@ var Header=React.createClass({
             <h1 className="title">2048</h1>
             <ToolsBar gameData={this.props.gameData}/>
             <div className='playAgain' onClick={this.props.handleNewGame}>new game</div>
+            <CellSelect gameData={this.props.gameData} handleNewGame={this.props.handleNewGame} />
         </div>
       )
     }
@@ -101,7 +102,27 @@ var ToolsBar =React.createClass({
             <div className='nowScore'>{this.props.gameData.score}</div>
             <div className='bestScore'>{this.props.gameData.bestScore}</div>
         </div>
-        
+      )
+    }
+})
+
+var CellSelect=React.createClass({
+    valueSelect:function(event){
+      this.props.gameData.setSize(event.target.value);
+      this.props.gameData.focusGame();
+      this.props.handleNewGame();
+    },
+    render:function(){
+      return(
+         <label className="lbl-select">
+            <select className="select-cell-num" title="Select Cell Number" onChange={this.valueSelect} >
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+            </select>
+        </label>
       )
     }
 })
@@ -109,12 +130,12 @@ var ToolsBar =React.createClass({
 var React2048=React.createClass({
     getInitialState: function() {
          return {
-             gameData: new Game
+             gameData: new Game(),
          };
      },
     handleNewGame: function() {
          this.setState({
-             gameData: new Game
+             gameData: new Game(),
          });
     },
     handleKeyDown: function(event) {
@@ -135,12 +156,13 @@ var React2048=React.createClass({
          window.removeEventListener('keydown', this.handleKeyDown);
     },
     render:function(){
+        var gameData=this.state.gameData;
         return(
-          <div className='wrapper'>
-            <Header handleNewGame={this.handleNewGame}  gameData={this.state.gameData} />
-            <div className='container'>
-                <GridContainer gameData={this.state.gameData.gd} />
-                <NumContainer gd={this.state.gameData.gd} />
+          <div className={'wrapper-for-'+gameData.size}>
+            <Header handleNewGame={this.handleNewGame}  gameData={gameData} />
+            <div className={'container-for-'+gameData.size} >
+                <GridContainer gameData={gameData.gd} />
+                <NumContainer gd={gameData.gd} />
             </div>
           </div>
         )
