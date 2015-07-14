@@ -424,7 +424,7 @@ label.lbl-select::after {
     content: "\25bc";
     position: absolute;
     top: 0;
-    right: 0;
+    right: 4px;
     bottom: 0;
     width: 20px;
     line-height: 40px;
