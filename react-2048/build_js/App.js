@@ -785,7 +785,7 @@
 /* 10 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "a81cd9bd20cfa0372cd383433678cd62.png"
+	module.exports = "build_js/"+ "a81cd9bd20cfa0372cd383433678cd62.png"
 
 /***/ },
 /* 11 */
