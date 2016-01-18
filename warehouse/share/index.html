@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>jQuery和CSS3超炫旋转环状菜单特效|DEMO</title>
+	<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+	<link rel='stylesheet prefetch' href='http://libs.useso.com/js/font-awesome/4.2.0/css/font-awesome.min.css'>
+	<link rel='stylesheet prefetch' href='css/animate.min.css'>
+	<link rel="stylesheet" type="text/css" href="css/default.css">
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<!--[if IE]>
+		<script src="http://libs.useso.com/js/html5shiv/3.7/html5shiv.min.js"></script>
+	<![endif]-->
+</head>
+<body>
+	<div class="htmleaf-container">
+		<header class="htmleaf-header">
+			<h1>jQuery和CSS3超炫旋转环状菜单特效 <span>A Wheel-style Rotating Menu with jQuery and CSS3</span></h1>
+		</header>
+		<div id='ss_menu'>
+		  <div>
+		    <i class="fa fa-qq"></i>
+		  </div>
+		  <div>
+		    <i class="fa fa-weibo"></i>
+		  </div>
+		  <div>
+		    <i class="fa fa-weixin"></i>
+		  </div>
+		  <div>
+		    <i class="fa fa-renren"></i>
+		  </div>
+		  <div class='menu'>
+		    <div class='share' id='ss_toggle' data-rot='180'>
+		      <div class='circle'></div>
+		      <div class='bar'></div>
+		    </div>
+		  </div>
+		</div>
+
+	</div>
+	
+	<script src="http://libs.useso.com/js/jquery/2.1.1/jquery.min.js" type="text/javascript"></script>
+	<script>window.jQuery || document.write('<script src="js/jquery-2.1.1.min.js"><\/script>')</script>
+	<script>
+	$(document).ready(function (ev) {
+	    var toggle = $('#ss_toggle');
+	    var menu = $('#ss_menu');
+	    var rot;
+	    $('#ss_toggle').on('click', function (ev) {
+	        rot = parseInt($(this).data('rot')) - 180;
+	        menu.css('transform', 'rotate(' + rot + 'deg)');
+	        menu.css('webkitTransform', 'rotate(' + rot + 'deg)');
+	        if (rot / 180 % 2 == 0) {
+	            toggle.parent().addClass('ss_active');
+	            toggle.addClass('close');
+	        } else {
+	            toggle.parent().removeClass('ss_active');
+	            toggle.removeClass('close');
+	        }
+	        $(this).data('rot', rot);
+	    });
+	});
+	</script>
+</body>
+</html>

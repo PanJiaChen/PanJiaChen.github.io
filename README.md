@@ -8,5 +8,7 @@
 [twitter喜欢点击效果
 ](http://panjiachen.github.io/warehouse/twitterLike/) 
 
+[分享share 动效
+](http://panjiachen.github.io/warehouse/share/)
 
 
