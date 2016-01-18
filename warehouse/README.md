@@ -2,5 +2,5 @@
 
 日常收集
 [20种炫酷的菜单线条动画特效UI设计效果
-](https://ngrok.com/) 
+](http://panjiachen.github.io/warehouse/LineMenuStyles/) 
 

@@ -1,4 +1,12 @@
-PanJiaChen.github.io
-====================
+#日常前端仓库
 
-Pjc
+日常收集
+
+[20种炫酷的菜单线条动画特效UI设计效果
+](http://panjiachen.github.io/warehouse/LineMenuStyles/) 
+
+[twitter喜欢点击效果
+](http://panjiachen.github.io/warehouse/twitterLike/) 
+
+
+
