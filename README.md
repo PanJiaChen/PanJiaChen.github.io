@@ -11,4 +11,7 @@
 [分享share 动效
 ](http://panjiachen.github.io/warehouse/share/)
 
+[鼠标滑过 3D动画特效
+](http://panjiachen.github.io/warehouse/Direction-aware3D/)
+
 
