@@ -12,6 +12,9 @@
 
 [easings 动画函数](http://easings.net/zh-cn)
 
+[drop library](http://github.hubspot.com/drop/docs/welcome/)
 
+[花瓣绽开式分享动画](http://codepen.io/CSS3fx/pen/RNYaoE)
 
-测试
+[移动端下拉分享](http://tympanus.net/codrops/2015/10/23/mobile-pull-to-share-interaction-experiment/)
+
