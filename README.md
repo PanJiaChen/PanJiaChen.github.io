@@ -19,3 +19,5 @@
 [移动端下拉分享](http://tympanus.net/codrops/2015/10/23/mobile-pull-to-share-interaction-experiment/)
 
 [TextStylesHoverEffects 鼠标划过字体炫酷效果](http://panjiachen.github.io/warehouse/TextStylesHoverEffects/)
+
+[like点击 动效](http://panjiachen.github.io/warehouse/likeClickEffect/)
