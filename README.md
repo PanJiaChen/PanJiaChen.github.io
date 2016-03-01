@@ -21,3 +21,5 @@
 [TextStylesHoverEffects 鼠标划过字体炫酷效果](http://panjiachen.github.io/warehouse/TextStylesHoverEffects/)
 
 [like点击 动效](http://panjiachen.github.io/warehouse/likeClickEffect/)
+
+[移动端 rem解决方案](https://github.com/amfe/lib-flexible)
