@@ -23,3 +23,9 @@
 [like点击 动效](http://panjiachen.github.io/warehouse/likeClickEffect/)
 
 [移动端 rem解决方案](https://github.com/amfe/lib-flexible)
+
+
+##Hybrid APP
+
+[Hybrid APP架构设计思路](https://github.com/chemdemo/chemdemo.github.io/issues/12)
+[html5-qrcode](https://github.com/zhiqiang21/WebComponent/tree/master/html5-Qrcode)
