@@ -1,0 +1,100 @@
+<!DOCTYPE HTML>
+<html class="">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css">
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link href='http://fonts.googleapis.com/css?family=Raleway:100,200,300,400' rel='stylesheet' type='text/css'>
+
+    <link href="./mfb.css" rel="stylesheet">
+    <!-- endbuild -->
+
+    <title>Material floating button. The index.</title>
+</head>
+<body>
+
+<ul id="menu" class="mfb-component--br mfb-zoomin" data-mfb-toggle="hover">
+    <li class="mfb-component__wrap">
+        <a href="#" class="mfb-component__button--main">
+            <i class="mfb-component__main-icon--resting ion-plus-round"></i>
+            <i class="mfb-component__main-icon--active ion-close-round"></i>
+        </a>
+        <ul class="mfb-component__list">
+            <li>
+                <a href="https://github.com/nobitagit/material-floating-button/" data-mfb-label="View on Github"
+                   class="mfb-component__button--child">
+                    <i class="mfb-component__child-icon ion-social-github"></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/nobitagit" data-mfb-label="Follow me on Github"
+                   class="mfb-component__button--child">
+                    <i class="mfb-component__child-icon ion-social-octocat"></i>
+                </a>
+            </li>
+
+            <li>
+                <a href="http://twitter.com/share?text=Check this material floating button component!&url=http://nobitagit.github.io/material-floating-button/&hashtags=material,design,button,css"
+                   data-mfb-label="Share on Twitter" class="mfb-component__button--child">
+                    <i class="mfb-component__child-icon ion-social-twitter"></i>
+                </a>
+            </li>
+        </ul>
+    </li>
+</ul>
+
+<section id="panel" class="panel">
+
+    <select id="selections-fx">
+        <option value=" mfb-zoomin " selected>Zoom in</option>
+        <option value=" mfb-slidein ">Slide in</option>
+        <option value="  mfb-slidein-spring ">Slide in (spring)</option>
+        <option value=" mfb-fountain ">Fountain</option>
+    </select>
+
+    <select id="selections-pos">
+        <option value="mfb-component--tl ">top left</option>
+        <option value="mfb-component--tr ">top right</option>
+        <option value="mfb-component--bl ">bottom left</option>
+        <option value="mfb-component--br " selected>bottom right</option>
+    </select>
+    </p>
+</section>
+<!-- build:js mfb.js -->
+<!--<script src="../mfb.js"></script>-->
+<!-- endbuild -->
+<script>
+    var panel = document.getElementById('panel'),
+            menu = document.getElementById('menu'),
+            selectFx = document.getElementById('selections-fx'),
+            selectPos = document.getElementById('selections-pos'),
+            // demo defaults
+            effect = 'mfb-zoomin',
+            pos = 'mfb-component--br';
+    selectFx.addEventListener('change', switchEffect);
+    selectPos.addEventListener('change', switchPos);
+    function _toggleCode() {
+        panel.classList.toggle('viewCode');
+    }
+    function switchEffect(e) {
+        effect = this.options[this.selectedIndex].value;
+        renderMenu();
+    }
+    function switchPos(e) {
+        pos = this.options[this.selectedIndex].value;
+        renderMenu();
+    }
+    function renderMenu() {
+        menu.style.display = 'none';
+        // ?:-)
+        setTimeout(function () {
+            menu.style.display = 'block';
+            menu.className = pos + effect;
+        }, 1);
+    }
+</script>
+<!-- @include ga.html -->
+</body>
+</html>
