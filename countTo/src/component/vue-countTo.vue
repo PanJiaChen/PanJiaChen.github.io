@@ -86,6 +86,7 @@ export default {
     }
   },
   mounted() {
+    console.log(this.startVal)
     if (this.autoplay) {
       this.start();
     }

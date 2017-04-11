@@ -1,0 +1,37 @@
+code {
+  display: block;
+  padding: 8px 15px;
+  background-color: #f6f8fa;
+  border-radius: 5px;
+  border: 1px solid #e5e5e5;
+  overflow-x: auto;
+  font-family: Monaco, Bitstream Vera Sans Mono, Lucida Console, Terminal;
+  color: #333;
+  font-size: 12px;
+}
+
+p,
+ul,
+ol,
+table,
+pre,
+dl {
+  margin: 0 0 20px;
+}
+
+
+h3{
+    color: #494949;
+     line-height: 1.1;
+}
+
+.container {
+  width: 980px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.example1 {
+  font-size: 40px;
+  color: #4AB7BD;
+}
