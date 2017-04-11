@@ -1,10 +1,10 @@
-## vue-countTo
+# vue-countTo
 It's a vue component that will count to a target number at a specified duration.
 vue-countTo is a dependency-free, lightweight vue component that can be overwrited  easingFn by yourself.
 You can set startVal and endVal ,it will automatic judge count up or count down.
 It is learn from countUp.js;
 
-####[Try the demo](https://github.com/wscn-FED/wscn-market-components/raw/master/images/demo.png)
+## [Try the demo](https://github.com/wscn-FED/wscn-market-components/raw/master/images/demo.png)
 
 ### How to use?
 ```bash
