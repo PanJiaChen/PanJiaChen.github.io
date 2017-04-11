@@ -6,7 +6,7 @@
 <script>
 import { requestAnimationFrame, cancelAnimationFrame } from './requestAnimationFrame.js'
 export default {
-  name: 'countTo',
+  name: 'count-to',
   props: {
     startVal: {
       type: Number,
@@ -15,7 +15,7 @@ export default {
     },
     endVal: {
       type: Number,
-      required: true,
+      required: false,
       default: 2017
     },
     duration: {
