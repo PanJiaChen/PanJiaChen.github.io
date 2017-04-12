@@ -146,6 +146,9 @@ export default {
         if (this.callback) this.$emit('callback');
       }
     },
+    isNumber(val) {
+      return !isNaN(parseFloat(val))
+    },
     formatNumber(num) {
       num = num.toFixed(this.decimals);
       num += '';
@@ -153,7 +156,7 @@ export default {
       let x1 = x[0];
       const x2 = x.length > 1 ? this.decimal + x[1] : '';
       const rgx = /(\d+)(\d{3})/;
-      if (this.separator) {
+      if (this.separator && !this.isNumber(this.separator)) {
         while (rgx.test(x1)) {
           x1 = x1.replace(rgx, '$1' + this.separator + '$2');
         }

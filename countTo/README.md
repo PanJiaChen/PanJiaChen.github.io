@@ -74,6 +74,8 @@ demo:
 | decimals     | the number of decimal places to show | Number | 0 |
 | decimal     | the split decimal | String | . |
 | separator     | the separator | String | , |
+| prefix     | the prefix | String | '' |
+| suffix     | the suffix | String | '' |
 | useEasing     | is use easing function | Boolean | true |
 | easingFn     | the easing function | Function | — |
 
