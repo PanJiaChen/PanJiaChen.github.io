@@ -23,23 +23,37 @@
   <div id="app">
     <template>
       <div class='container'>
-        <div class="example-item">
+        <!--<div class="example-item">
           <h3> simple example</h3>
-          <code>&lt;count-to class=&#x27;example1&#x27; :startVal=&#x27;0&#x27; :endVal=&#x27;2017&#x27; &gt;&lt;/count-to&gt;</code>
-          <count-to class='example1' :startVal='0' :endVal='2017' :duration=8000></count-to>
+          <code>&lt;count-to class=&#x27;example1&#x27; :startVal=&#x27;0&#x27; :endVal=&#x27;2017&#x27; :duration=4000&gt;&lt;/count-to&gt;</code>
+          <count-to ref='example1' class='example1' :start-val='0' :end-val='2017' :duration=4000></count-to>
+          <div @click='start1'>开始</div>
         </div>
         <div class="example-item">
           <h3> count down example</h3>
           <code> &lt;count-to class=&#x27;example2&#x27; :startVal=&#x27;2017&#x27; :endVal=&#x27;0&#x27; :duration=8000&gt;&lt;/count-to&gt;</code>
-          <count-to class='example2' :start-val='2017' :end-val=0 :duration=8000></count-to>
+          <count-to ref='example2' class='example2' :start-val='2017' :end-val=0 :duration=8000></count-to>
+          <div @click='start2'>开始</div>
+        </div>-->
+        <div class="example-item">
+          <h3> custom example</h3>
+          <count-to ref='example3' class='example3' :start-val='_startVal' :end-val='_endVal' :duration=4000 :autoplay=false> </count-to>
+          <div>
+            <label class="label" for="startValInput">startVal:  <input type="number" v-model.number='setStartVal' name='startValInput' /></label>
+            <label class="label" for="endValInput">endVal:  <input type="number" v-model.number='setEndVal' name='endVaInputl' /></label>
+            <!--<label class="Label" for="starttVal">startVal:  <input type="number" v-model.number='_' name='startVal' /></label>-->
+
+          </div>
+
+          <div @click='start3'>开始</div>
         </div>
         <!--<count-to class='apple' ref="countTo2" :startVal='5000' :decimals=1 :endVal='0' @mountedCallback="mountedCallback" @callback='callback'></count-to>-->
-        <div @click='start'>开始</div>
+        <!--<div @click='start'>开始</div>
         <template v-if='started'>
           <div v-show='!paused' @click='pause'>暂停</div>
           <div v-show='paused' @click='resume'>恢复</div>
         </template>
-        <div @click='reset'>reset</div>
+        <div @click='reset'>reset</div>-->
       </div>
     </template>
   </div>
@@ -49,18 +63,41 @@
       name: 'test',
       data() {
         return {
+          setStartVal: 0,
+          setEndVal: 2017,
           started: false,
           paused: false,
           reseted: false,
         }
       },
+      computed: {
+        _startVal() {
+          if (this.setStartVal) {
+            return this.setStartVal
+          } else {
+            return 0
+          }
+        },
+        _endVal() {
+          if (this.setEndVal) {
+            return this.seteEndVal
+          } else {
+            return 0
+          }
+        },
+      },
       methods: {
         callback() {
           console.log('callback')
         },
-        start() {
-          this.started = true;
-          this.$refs.countTo.start();
+        start1() {
+          this.$refs.example1.start();
+        },
+        start2() {
+          this.$refs.example2.start();
+        },
+        start3() {
+          this.$refs.example3.start();
         },
         pause() {
           this.paused = true;

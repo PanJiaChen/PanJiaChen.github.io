@@ -60,7 +60,7 @@ module.exports = {
   performance: {
     hints: false
   },
-  devtool: '#cheap-source-map'
+  devtool: '#source-map'
 }
 
 if (process.env.NODE_ENV === 'production') {

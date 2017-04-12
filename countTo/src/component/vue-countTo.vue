@@ -132,7 +132,6 @@ export default {
           this.printVal = this.localStartVal + (this.localStartVal - this.startVal) * (progress / this.localDuration);
         }
       }
-
       if (this.countDown) {
         this.printVal = this.printVal < this.endVal ? this.endVal : this.printVal;
       } else {
