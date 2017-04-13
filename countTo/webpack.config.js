@@ -6,7 +6,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, './dist'),
     publicPath: '/dist/',
-    filename: 'build.js',
+    filename: 'vueCountTo.min.js',
     library: 'VueCountTo',
     libraryTarget: 'umd',
     umdNamedDefine: true

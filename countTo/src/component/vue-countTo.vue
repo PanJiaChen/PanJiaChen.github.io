@@ -73,6 +73,7 @@ export default {
       localStartVal: this.startVal,
       displayValue: this.formatNumber(this.startVal),
       printVal: null,
+      paused: false,
       localDuration: this.duration,
       startTime: null,
       timestamp: null,
@@ -86,7 +87,6 @@ export default {
     }
   },
   mounted() {
-    console.log(this.startVal)
     if (this.autoplay) {
       this.start();
     }
@@ -97,7 +97,17 @@ export default {
       this.localStartVal = this.startVal;
       this.startTime = null;
       this.localDuration = this.duration;
+      this.paused = false;
       this.rAF = requestAnimationFrame(this.count);
+    },
+    pauseResume() {
+      if (this.paused) {
+        this.resume();
+        this.paused = false;
+      } else {
+        this.pause();
+        this.paused = true;
+      }
     },
     pause() {
       cancelAnimationFrame(this.rAF);

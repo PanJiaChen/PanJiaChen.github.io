@@ -9,7 +9,7 @@
 
 <body>
   <script src='https://unpkg.com/vue@2.2.6/dist/vue.js'></script>
-  <script src="./dist/build.js"></script>
+  <script src="./dist/vueCountTo.min.js"></script>
   <a href=''>
     <svg width="80" height="80" viewBox="0 0 250 250" style="fill:#4AB7BD; color:#fff; position: absolute; top: 0; border: 0; right: 0;"
       aria-hidden="true">
@@ -22,18 +22,19 @@
   </a>
   <div id="app">
     <template>
+      <h1>Vue CountTo</h1>
       <div class='container'>
         <div class="example-item">
           <h3> simple example</h3>
-          <code>&lt;count-to class=&#x27;example1&#x27; :startVal=&#x27;0&#x27; :endVal=&#x27;2017&#x27; :duration=4000&gt;&lt;/count-to&gt;</code>
+          <code>&lt;count-to :startVal=&#x27;0&#x27; :endVal=&#x27;2017&#x27; :duration=4000&gt;&lt;/count-to&gt;</code>
           <count-to ref='example1' class='example1' :start-val='0' :end-val='2017' :duration=4000></count-to>
-          <div @click='start1'>开始</div>
+          <div class='example-btn' @click='start1'>开始</div>
         </div>
         <div class="example-item">
           <h3> count down example</h3>
-          <code> &lt;count-to class=&#x27;example2&#x27; :startVal=&#x27;2017&#x27; :endVal=&#x27;0&#x27; :duration=8000&gt;&lt;/count-to&gt;</code>
+          <code> &lt;count-to :startVal=&#x27;2017&#x27; :endVal=&#x27;0&#x27; :duration=8000&gt;&lt;/count-to&gt;</code>
           <count-to ref='example2' class='example2' :start-val='2017' :end-val=0 :duration=8000></count-to>
-          <div @click='start2'>开始</div>
+          <div class='example-btn' @click='start2'>开始</div>
         </div>
         <div class="example-item">
           <h3> custom example</h3>
@@ -44,21 +45,17 @@
             <label class="label" for="startValInput">startVal:  <input type="number" v-model.number='setStartVal' name='startValInput' /></label>
             <label class="label" for="endValInput">endVal:  <input type="number" v-model.number='setEndVal' name='endVaInput' /></label>
             <label class="label" for="durationInput">duration:  <input type="number" v-model.number='setDuration' name='durationInput' /></label>
+            <div class="startBtn example-btn" @click='start3'>开始</div>
+            <div class="pause-resume-btn example-btn" @click='pauseResume'>暂停/恢复</div>
+            <br/>
             <label class="label" for="decimalsInput">decimals:  <input type="number" v-model.number='setDecimals' name='decimalsInput' /></label>
             <label class="label" for="separatorInput">separator:  <input v-model='setSeparator' name='separatorInput' /></label>
             <label class="label" for="prefixInput">prefix: <input v-model='setPrefix' name='prefixInput' /></label>
             <label class="label" for="suffixInput">suffix: <input v-model='setSuffix' name='suffixInput' /></label>
           </div>
-
-          <div @click='start3'>开始</div>
+           <code>&lt;count-to  :start-val=&#x27;{{_startVal}}&#x27; :end-val=&#x27;{{_endVal}}&#x27; :duration=&#x27;{{_duration}}&#x27; :decimals=&#x27;{{_decimals}}&#x27;
+            :separator=&#x27;{{_separator}}&#x27; :prefix=&#x27;{{_prefix}}&#x27; :suffix=&#x27;{{_suffix}}&#x27; :autoplay=false&gt;</code>
         </div>
-        <!--<count-to class='apple' ref="countTo2" :startVal='5000' :decimals=1 :endVal='0' @mountedCallback="mountedCallback" @callback='callback'></count-to>-->
-        <!--<div @click='start'>开始</div>
-        <template v-if='started'>
-          <div v-show='!paused' @click='pause'>暂停</div>
-          <div v-show='paused' @click='resume'>恢复</div>
-        </template>
-        <div @click='reset'>reset</div>-->
       </div>
     </template>
   </div>
@@ -73,11 +70,8 @@
           setDuration: 4000,
           setDecimals: 0,
           setSeparator: ',',
-          setSuffix: 'rmb',
-          setPrefix: '¥',
-          started: false,
-          paused: false,
-          reseted: false,
+          setSuffix: ' rmb',
+          setPrefix: '¥ '
         }
       },
       computed: {
@@ -136,29 +130,8 @@
         start3() {
           this.$refs.example3.start();
         },
-        pause() {
-          this.paused = true;
-          this.$refs.countTo.pause();
-        },
-        resume() {
-          this.paused = false;
-          this.$refs.countTo.resume();
-        },
-        reset() {
-          this.$refs.countTo.reset();
-        },
-        mountedCallback() {
-          // this.$refs.countTo2.start();
-        }
-      },
-      filters: {
-        unescape: function (html) {
-          return html
-            .replace(html ? /&(?!#?\w+;)/g : /&/g, '&amp;')
-            .replace(/&lt;/g, "<")
-            .replace(/&gt;/g, ">")
-            .replace(/&quot;/g, "\"")
-            .replace(/&#39;/g, "\'");
+        pauseResume() {
+          this.$refs.example3.pauseResume();
         }
       }
     };
