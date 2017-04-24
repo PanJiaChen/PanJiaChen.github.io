@@ -1,2 +1,0 @@
-webpackJsonp([24,29],{291:function(n,e,t){var r=t(1)(null,t(734),null,null);n.exports=r.exports},734:function(n,e){n.exports={render:function(){var n=this,e=n.$createElement;return(n._self._c||e)("div",{staticClass:"components-container"},[n._v("\n  介绍\n")])},staticRenderFns:[]}}});
-//# sourceMappingURL=24.e3b5e7402f9bdceb515c.js.map
