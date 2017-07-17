@@ -2,9 +2,9 @@
 
 日常收集
 
-[20种炫酷的菜单线条动画特效UI设计效果](http://panjiachen.github.io/warehouse/LineMenuStyles/) 
+[20种炫酷的菜单线条动画特效UI设计效果](http://panjiachen.github.io/warehouse/LineMenuStyles/)
 
-[twitter喜欢点击效果](http://panjiachen.github.io/warehouse/twitterLike/) 
+[twitter喜欢点击效果](http://panjiachen.github.io/warehouse/twitterLike/)
 
 [分享share 动效](http://panjiachen.github.io/warehouse/share/)
 
@@ -24,6 +24,8 @@
 
 [移动端 rem解决方案](https://github.com/amfe/lib-flexible)
 
+
+[字逐渐显示效果](https://codepen.io/dudleystorey/pen/pRLMrE)
 
 ##Hybrid APP
 
