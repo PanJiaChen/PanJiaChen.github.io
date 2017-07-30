@@ -27,6 +27,8 @@
 
 [字逐渐显示效果](https://codepen.io/dudleystorey/pen/pRLMrE)
 
+[分享动画](https://codepen.io/jonahvsweb/pen/doQpMV)
+
 ##Hybrid APP
 
 [Hybrid APP架构设计思路](https://github.com/chemdemo/chemdemo.github.io/issues/12)
