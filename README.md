@@ -1,6 +1,6 @@
 #日常前端仓库
 
-日常收集
+## 日常收集
 
 [20种炫酷的菜单线条动画特效UI设计效果](http://panjiachen.github.io/warehouse/LineMenuStyles/)
 
@@ -29,7 +29,9 @@
 
 [分享动画](https://codepen.io/jonahvsweb/pen/doQpMV)
 
-##Hybrid APP
+[Creative Gooey Effects](https://tympanus.net/Development/CreativeGooeyEffects/menu.html)
+
+## Hybrid APP
 
 [Hybrid APP架构设计思路](https://github.com/chemdemo/chemdemo.github.io/issues/12)
 [html5-qrcode](https://github.com/zhiqiang21/WebComponent/tree/master/html5-Qrcode)
