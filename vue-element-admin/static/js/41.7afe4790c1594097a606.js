@@ -1,0 +1,1 @@
+webpackJsonp([41],{plNp:function(e,n,r){var t=r("VU/8")(null,r("rwhU"),null,null,null);e.exports=t.exports},rwhU:function(e,n){e.exports={render:function(){var e=this,n=e.$createElement;return(e._self._c||n)("router-view")},staticRenderFns:[]}}});
