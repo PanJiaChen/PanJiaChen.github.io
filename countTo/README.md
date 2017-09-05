@@ -1,6 +1,8 @@
-# vue-countTo
+# vue-countTo    [![vue2](https://img.shields.io/badge/vue-2.x-brightgreen.svg)](https://vuejs.org/) [![Gemnasium](https://img.shields.io/gemnasium/mathiasbynens/he.svg)](https://github.com/PanJiaChen/vue-countTo) [![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/PanJiaChen/vue-countTo) [![npm](https://img.shields.io/npm/v/vue-count-to.svg)](https://www.npmjs.com/package/vue-count-to)
+
 vue-countTo is a dependency-free, lightweight vue component that can be overwrited  easingFn by yourself.
 You can set startVal and endVal ,it will automatic judge count up or count down.
+It is support vue-ssr.
 It is learn from countUp.js;
 
 ## [Try the demo](http://panjiachen.github.io/countTo/demo/)
@@ -14,7 +16,7 @@ npm install vue-count-to
 
 ```vue
 <template>
-	<countTo :startVal='startVal' :endVal='endVal' :duration='3000'></countTo>
+  <countTo :startVal='startVal' :endVal='endVal' :duration='3000'></countTo>
 </template>
 
 <script>
@@ -52,6 +54,8 @@ Use CDN Script: [demo](https://github.com/PanJiaChen/vue-countTo/blob/master/dem
 | suffix     | the suffix | String | '' |
 | useEasing     | is use easing function | Boolean | true |
 | easingFn     | the easing function | Function | — |
+
+** notes: when autoplay:true , it will auto start when startVal or endVal change **
 
 
 ### Functions
