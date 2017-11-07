@@ -8,6 +8,7 @@
   - [和服务端进行交互](server.md)
   - [引入外部模块](import.md)
   - [构建和发布](deploy.md)
+  - [跨域问题](cors.md)
 
 - 进阶
   - [封装组件](componentsn.md)
@@ -18,6 +19,9 @@
   - [测试](test.md ":disabled")
   - [错误处理](error.md)
   - [国际化](i18n.md )
+
+- 组件
+  - [富文本](rich-editor)
 
 - [更新日志](https://github.com/PanJiaChen/vue-element-admin/releases ":ignore")
 - [常见问题](faq.md)

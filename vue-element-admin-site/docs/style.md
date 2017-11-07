@@ -33,10 +33,20 @@ vue-element-admin 所有全局样式都在 `src/styles` 目录下设置
 │   └── variables.scss           # 全局变量
 ```
 
+常见的工作流程是，全局样式都写在 `src/styles` 目录下，每个页面自己的样式都写在自己相对于的 `.vue` 文件之中
+```css
+<style>
+/* global styles */
+</style>
+
+<style scoped>
+/* local styles */
+</style>
+```
 
 
 ## 自定义 element-ui 样式
-现在我们来说说怎么覆盖element-ui样式。由于element-ui的样式我们是在全局引入的，所以你想在某个view里面覆盖它的样式就不能加scoped，但你又想只覆盖这个页面的element样式，你就可在它的父级加一个class，以用命名空间来解决问题。
+现在我们来说说怎么覆盖element-ui样式。由于element-ui的样式我们是在全局引入的，所以你想在某个页面里面覆盖它的样式就不能加 scoped，但你又想只覆盖这个页面的element样式，你就可在它的父级加一个class，用命名空间来解决问题。
 
 ```css
 .aritle-page{ /* 你的命名空间 */
@@ -79,7 +89,7 @@ module.exports = {
 *  `> 1% ` 兼容全球使用率大于1%的游览器
 *  `last 2 versions` 兼容每个游览器的最近两个版本
 *  `not ie <= 8` 不兼容ie8及以下
-具体可见 [browserslist](https://github.com/ai/browserslist), postcss也还有很多很多其它的功能大家可以[自行去把玩](https://www.postcss.parts/)
+具体可见 [browserslist](https://github.com/ai/browserslist), postcss也还有很多很多其它的功能大家可以[自行去探究](https://www.postcss.parts/)
 
 
 ## mixin
