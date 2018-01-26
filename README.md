@@ -31,6 +31,12 @@
 
 [Creative Gooey Effects](https://tympanus.net/Development/CreativeGooeyEffects/menu.html)
 
+[typing text transition](https://codepen.io/rachsmith/pen/oGEMbz)
+
+[Progress Nav](https://codepen.io/hakimel/pen/BpKNPg)
+
+[Atom Button](https://codepen.io/perry_nt/pen/OWoNxK)
+
 ## Hybrid APP
 
 [Hybrid APP架构设计思路](https://github.com/chemdemo/chemdemo.github.io/issues/12)
