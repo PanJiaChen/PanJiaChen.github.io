@@ -12,7 +12,9 @@
 [![GitHub stars](https://img.shields.io/github/stars/Popmotion/popmotion.svg?style=social&label=Stars)](https://github.com/Popmotion/popmotion)
 
 
-[merge-images](https://github.com/lukechilds/merge-images) 纯前端图片合成
+[merge-images](https://github.com/lukechilds/merge-images) 纯前端图片合成  <a style="display:inline-block;vertical-align: middle;" href="https://github.com/vuejs/vue">
+    <img src="https://img.shields.io/github/stars/Popmotion/popmotion.svg?style=social&label=Stars" alt="vue">
+  </a>
 
 [direction-reveal](https://github.com/NigelOToole/direction-reveal) 一个根据鼠标进入方向展现hover效果的库
 
