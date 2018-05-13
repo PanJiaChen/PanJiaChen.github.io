@@ -1,6 +1,24 @@
-#日常前端仓库
+# Node
 
-## 日常收集
+[consola](https://github.com/nuxt/consola) 优雅命令行console vuepress也使用了 Nuxt出品
+
+[webpackba](https://github.com/nuxt/webpackbar) webpack打包进度可视化 Nuxt出品
+
+[jarvis](https://github.com/zouhir/jarvis) webpack dashboard  配色好看
+
+# 前端
+
+[popmotion](https://github.com/Popmotion/popmotion) 一个函数式前端动画库 能做出酷炫的动画效果
+[![GitHub stars](https://img.shields.io/github/stars/Popmotion/popmotion.svg?style=social&label=Stars)](https://github.com/Popmotion/popmotion)
+
+
+[merge-images](https://github.com/lukechilds/merge-images) 纯前端图片合成
+
+[direction-reveal](https://github.com/NigelOToole/direction-reveal) 一个根据鼠标进入方向展现hover效果的库
+
+
+
+## n年前动画收集
 
 [20种炫酷的菜单线条动画特效UI设计效果](http://panjiachen.github.io/warehouse/LineMenuStyles/)
 
@@ -23,7 +41,6 @@
 [like点击 动效](http://panjiachen.github.io/warehouse/likeClickEffect/)
 
 [移动端 rem解决方案](https://github.com/amfe/lib-flexible)
-
 
 [字逐渐显示效果](https://codepen.io/dudleystorey/pen/pRLMrE)
 
