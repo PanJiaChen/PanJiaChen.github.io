@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[14],{"27OO":function(t,e,l){"use strict";l.r(e);var n=l("JFUb"),a=Object(n.a)(null,function(){var t=this.$createElement,e=this._self._c||t;return e("div",{staticStyle:{padding:"30px"}},[e("el-alert",{attrs:{title:"menu 2",closable:!1}})],1)},[],!1,null,null,null);e.default=a.exports}}]);

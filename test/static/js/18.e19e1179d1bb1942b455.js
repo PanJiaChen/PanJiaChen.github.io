@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[18],{Vc2m:function(e,t,l){"use strict";l.r(t);var n=l("JFUb"),s=Object(n.a)(null,function(){var e=this.$createElement,t=this._self._c||e;return t("div",{staticStyle:{padding:"30px"}},[t("el-alert",{attrs:{title:"menu 1-2",type:"success",closable:!1}},[t("router-view")],1)],1)},[],!1,null,null,null);t.default=s.exports}}]);
