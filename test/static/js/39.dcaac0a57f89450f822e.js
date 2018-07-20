@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[39],{nOMX:function(e,t,n){"use strict";n.r(t);var a={name:"createForm",components:{ArticleDetail:n("EXL7").a}},i=n("JFUb"),l=Object(i.a)(a,function(){var e=this.$createElement;return(this._self._c||e)("article-detail",{attrs:{"is-edit":!1}})},[],!1,null,null,null);t.default=l.exports}}]);
